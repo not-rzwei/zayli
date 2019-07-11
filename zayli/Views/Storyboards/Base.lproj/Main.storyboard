@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XxC-aR-6jX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9Y-Ni-7zP">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Practice-->
         <scene sceneID="pVs-vk-N8m">
             <objects>
                 <tableViewController id="fsQ-Tz-iNn" customClass="HomeViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,11 +48,45 @@
                             <outlet property="delegate" destination="fsQ-Tz-iNn" id="nEx-71-h8m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="pdk-n8-k9u"/>
+                    <navigationItem key="navigationItem" title="Practice" id="pdk-n8-k9u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3P-oQ-cMa">
+                            <connections>
+                                <segue destination="c9Y-Ni-7zP" kind="show" id="YiY-vk-QQr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhg-gk-SXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="129.91071428571428"/>
+        </scene>
+        <!--New Practice-->
+        <scene sceneID="5cR-Ex-brT">
+            <objects>
+                <tableViewController title="New Practice" id="c9Y-Ni-7zP" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vYg-kl-Iqs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IVU-cl-0GJ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IVU-cl-0GJ" id="UTc-tD-LFV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c9Y-Ni-7zP" id="R1O-ZP-73c"/>
+                            <outlet property="delegate" destination="c9Y-Ni-7zP" id="kcP-Hj-fxs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp1-Xc-d5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="834"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ogl-sp-364">
@@ -65,7 +99,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fsQ-Tz-iNn" kind="relationship" relationship="rootViewController" id="aGf-IE-Kj7"/>
+                        <segue destination="fsQ-Tz-iNn" kind="relationship" relationship="rootViewController" id="Mic-7R-6Gf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msp-eY-t74" userLabel="First Responder" sceneMemberID="firstResponder"/>
