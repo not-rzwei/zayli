@@ -63,7 +63,7 @@
         <!--New Practice-->
         <scene sceneID="5cR-Ex-brT">
             <objects>
-                <tableViewController title="New Practice" id="c9Y-Ni-7zP" sceneMemberID="viewController">
+                <tableViewController title="New Practice" id="c9Y-Ni-7zP" customClass="NewPracticeViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="9" estimatedSectionFooterHeight="-1" id="vYg-kl-Iqs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input your idea" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-2U-Elf">
                                                     <rect key="frame" x="20" y="12.5" width="374" height="19"/>
                                                     <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" textContentType="name"/>
                                                 </textField>
                                             </subviews>
@@ -105,6 +106,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Specify the problem" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-yx-Jez">
                                                     <rect key="frame" x="20" y="12.5" width="374" height="19"/>
                                                     <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" textContentType="name"/>
                                                 </textField>
                                             </subviews>
@@ -129,6 +131,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Propose your solution" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hj6-oB-NY1">
                                                     <rect key="frame" x="20" y="12.5" width="374" height="19"/>
                                                     <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" textContentType="name"/>
                                                 </textField>
                                             </subviews>
@@ -176,6 +179,13 @@
                     <navigationItem key="navigationItem" title="New Practice" id="qmT-ks-KcY">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="NHS-ve-fCN"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ideaInput" destination="kYA-2U-Elf" id="EXO-cz-dlv"/>
+                        <outlet property="problemInput" destination="5dm-yx-Jez" id="rId-EW-erS"/>
+                        <outlet property="saveButton" destination="NHS-ve-fCN" id="HrF-lT-IZL"/>
+                        <outlet property="solutionInput" destination="hj6-oB-NY1" id="4Xf-1h-itc"/>
+                        <outlet property="summaryInput" destination="EGA-eB-syV" id="lyY-Uh-A3G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rp1-Xc-d5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
