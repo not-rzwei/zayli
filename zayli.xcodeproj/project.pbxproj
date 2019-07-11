@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29743EA322D7E2F50013C9B4 /* AppDelegate.swift */; };
-		29743EA622D7E2F50013C9B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29743EA522D7E2F50013C9B4 /* ViewController.swift */; };
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
 		29743EAE22D7E2F60013C9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		29743EA022D7E2F50013C9B4 /* zayli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zayli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29743EA322D7E2F50013C9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29743EA522D7E2F50013C9B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		29743EA822D7E2F50013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29743EAA22D7E2F60013C9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29743EAD22D7E2F60013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,53 @@
 		29743EA222D7E2F50013C9B4 /* zayli */ = {
 			isa = PBXGroup;
 			children = (
-				29743EA322D7E2F50013C9B4 /* AppDelegate.swift */,
-				29743EA522D7E2F50013C9B4 /* ViewController.swift */,
-				29743EA722D7E2F50013C9B4 /* Main.storyboard */,
-				29743EAA22D7E2F60013C9B4 /* Assets.xcassets */,
-				29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */,
-				29743EAF22D7E2F60013C9B4 /* Info.plist */,
+				29743EB922D7E40A0013C9B4 /* Models */,
+				29743EB622D7E3D40013C9B4 /* Views */,
+				29743EB522D7E3490013C9B4 /* Supporting Files */,
 			);
 			path = zayli;
+			sourceTree = "<group>";
+		};
+		29743EB522D7E3490013C9B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29743EA322D7E2F50013C9B4 /* AppDelegate.swift */,
+				29743EAA22D7E2F60013C9B4 /* Assets.xcassets */,
+				29743EAF22D7E2F60013C9B4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29743EB622D7E3D40013C9B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29743EB822D7E3E90013C9B4 /* Controllers */,
+				29743EB722D7E3DA0013C9B4 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29743EB722D7E3DA0013C9B4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				29743EA722D7E2F50013C9B4 /* Main.storyboard */,
+				29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		29743EB822D7E3E90013C9B4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		29743EB922D7E40A0013C9B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29743EA622D7E2F50013C9B4 /* ViewController.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = zayli/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/zayli/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rshier.zayli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = zayli/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/zayli/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rshier.zayli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
