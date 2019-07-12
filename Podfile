@@ -8,6 +8,6 @@ target 'zayli' do
   # Pods for zayli
   pod 'RealmSwift'
   pod 'Eureka'
-
+  pod 'RxSwift'
 
 end
