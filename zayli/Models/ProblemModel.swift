@@ -1,5 +1,5 @@
 //
-//  PracticeModel.swift
+//  ProblemModel.swift
 //  zayli
 //
 //  Created by rshier on 12/07/19.
@@ -9,14 +9,11 @@
 import Foundation
 import RealmSwift
 
-class Practice: Object {
+class Problem: Object {
     @objc dynamic var id = UUID().uuidString
-    @objc dynamic var timestamp  = NSDate().timeIntervalSince1970
-    @objc dynamic var idea = ""
-    @objc dynamic var target = ""
-    @objc dynamic var summary = ""
-    @objc dynamic var background = ""
-
+    @objc dynamic var name = ""
+    let practice = LinkingObjects(fromType: Practice.self, property: "problems")
+    
     override static func primaryKey() -> String? {
         return "id"
     }
