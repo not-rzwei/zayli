@@ -13,4 +13,8 @@ extension Form {
     func getMultivaluedSection(_ key: String) -> Array<Any>{
         return (self.values()[key]!! as! [Any?]).compactMap { $0 }
     }
+    
+    func valueByTag(_ key: String) -> String {
+        return self.values()[key] as! String
+    }
 }

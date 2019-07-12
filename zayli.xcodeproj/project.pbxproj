@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293376A422D801F300F7A546 /* NewPracticeViewController.swift */; };
 		2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451222D8693E0096BE6A /* PracticeModel.swift */; };
+		2942451522D870190096BE6A /* ProblemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451422D870190096BE6A /* ProblemModel.swift */; };
+		2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451922D879570096BE6A /* EurekaExtension.swift */; };
+		2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451B22D87CF00096BE6A /* SolutionModel.swift */; };
+		2942451E22D884570096BE6A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451D22D884570096BE6A /* RealmExtension.swift */; };
 		29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29743EA322D7E2F50013C9B4 /* AppDelegate.swift */; };
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
@@ -19,7 +23,11 @@
 
 /* Begin PBXFileReference section */
 		293376A422D801F300F7A546 /* NewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPracticeViewController.swift; sourceTree = "<group>"; };
-		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Views/Controllers/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
+		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Models/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
+		2942451422D870190096BE6A /* ProblemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProblemModel.swift; path = zayli/Models/ProblemModel.swift; sourceTree = SOURCE_ROOT; };
+		2942451922D879570096BE6A /* EurekaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaExtension.swift; sourceTree = "<group>"; };
+		2942451B22D87CF00096BE6A /* SolutionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionModel.swift; sourceTree = "<group>"; };
+		2942451D22D884570096BE6A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		29743EA022D7E2F50013C9B4 /* zayli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zayli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29743EA322D7E2F50013C9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29743EA822D7E2F50013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2942451622D878FD0096BE6A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2942451922D879570096BE6A /* EurekaExtension.swift */,
+				2942451D22D884570096BE6A /* RealmExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		29743E9722D7E2F50013C9B4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +82,7 @@
 		29743EA222D7E2F50013C9B4 /* zayli */ = {
 			isa = PBXGroup;
 			children = (
+				2942451622D878FD0096BE6A /* Extensions */,
 				29AF9A4322D7EDA000A35F6E /* Models */,
 				29743EB622D7E3D40013C9B4 /* Views */,
 				29743EB522D7E3490013C9B4 /* Supporting Files */,
@@ -104,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				2942451222D8693E0096BE6A /* PracticeModel.swift */,
+				2942451422D870190096BE6A /* ProblemModel.swift */,
+				2942451B22D87CF00096BE6A /* SolutionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,9 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
+				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 				29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */,
 				2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */,
+				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,
+				2942451522D870190096BE6A /* ProblemModel.swift in Sources */,
 				293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
