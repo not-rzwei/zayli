@@ -8,43 +8,69 @@
 
 import UIKit
 import Eureka
+import RealmSwift
 
 class NewPracticeViewController: FormViewController {
     
     // MARK: - Form Outlet
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBAction func saveAction(_ sender: Any) {
-        print(form.values())
+    @IBAction func saveAction(_ sender: UIBarButtonItem) {
+        let problems = form.getMultivaluedSection("problems") as! Array<String>
+        let solutions = form.getMultivaluedSection("solutions")
+        
+        let practice = Practice()
+        
+        practice.idea = form.valueByTag("idea")
+        practice.background = form.valueByTag("background")
+        practice.target = form.valueByTag("target")
+        practice.summary = form.valueByTag("summary")
+        
+        problems.forEach { problem in
+            let obj = Problem(value: [problem])
+            practice.problems.append(obj)
+        }
+        
+        solutions.forEach { solution in
+            let obj = Solution(value: [solution])
+            practice.solutions.append(obj)
+        }
+        
+        practice.writeAsync()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-    }
-    
-    func setupUI(){
-//        saveButton.isEnabled = false
-        
         setupForm()
     }
     
     func setupForm() {
+        
+        var rules = RuleSet<String>()
+        rules.add(rule: RuleRequired())
+        rules.add(rule: RuleMinLength(minLength: 5))
+        
         form
         +++ Section("idea")
         <<< TextRow("idea"){ row in
             row.placeholder = "Input your idea"
         }
+            
+        +++ Section("background problem")
+        <<< TextRow("background"){ row in
+            row.placeholder = "The big problem"
+        }
 
         +++ MultivaluedSection(
                 multivaluedOptions: [.Insert, .Delete],
-                header: "Problems") {
+                header: "specific Problems") {
             $0.tag = "problems"
                     
             $0.addButtonProvider = { section in
                 return ButtonRow(){
-                    $0.title = "Add problem"
+                    $0.title = "Add specific problem"
                 }
             }
             
@@ -72,12 +98,18 @@ class NewPracticeViewController: FormViewController {
                 }
             }
         }
-        
+            
+        +++ Section("target user")
+        <<< TextRow("target"){ row in
+            row.placeholder = "For whom?"
+        }
         
         +++ Section("summary")
         <<< TextAreaRow("summary"){ row in
             row.placeholder = "Write your idea's summary"
         }
+        
+        
     }
 
 }
