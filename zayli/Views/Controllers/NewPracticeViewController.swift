@@ -22,6 +22,8 @@ class NewPracticeViewController: FormViewController {
     }
     
     func setupUI(){
+        saveButton.isEnabled = false
+        
         setupForm()
     }
     
@@ -31,20 +33,46 @@ class NewPracticeViewController: FormViewController {
         <<< TextRow("idea"){ row in
             row.placeholder = "Input your idea"
         }
-        
-        +++ Section("problem")
-            <<< TextRow("problem"){ row in
-                row.placeholder = "Specify your problem"
+
+        +++ MultivaluedSection(
+                multivaluedOptions: [.Insert, .Delete],
+                header: "Problems") {
+            $0.tag = "solutions"
+                    
+            $0.addButtonProvider = { section in
+                return ButtonRow(){
+                    $0.title = "Add problem"
+                }
+            }
+            $0.multivaluedRowToInsertAt = { index in
+                return TextRow() {
+                    $0.placeholder = "Specify the problem"
+                }
+            }
+        }
+            
+        +++ MultivaluedSection(
+            multivaluedOptions: [.Insert, .Delete],
+            header: "Solutions") {
+                $0.tag = "solutions"
+                
+                $0.addButtonProvider = { section in
+                    return ButtonRow(){
+                        $0.title = "Add solution"
+                    }
+                }
+                $0.multivaluedRowToInsertAt = { index in
+                    return TextRow() {
+                        $0.placeholder = "Propose your solution"
+                    }
+                }
+                
         }
         
-        +++ Section("solution")
-            <<< TextRow("solution"){ row in
-                row.placeholder = "Propose your solution"
-        }
         
         +++ Section("summary")
-            <<< TextAreaRow("summary"){ row in
-                row.placeholder = "Write your idea's summary"
+        <<< TextAreaRow("summary"){ row in
+            row.placeholder = "Write your idea's summary"
         }
     }
 
