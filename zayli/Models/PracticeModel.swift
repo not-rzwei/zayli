@@ -17,6 +17,7 @@ class Practice: Object {
     @objc dynamic var summary = ""
     @objc dynamic var background = ""
     let problems = List<Problem>()
+    let solutions = List<Solution>()
 
     override static func primaryKey() -> String? {
         return "id"

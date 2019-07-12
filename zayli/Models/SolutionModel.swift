@@ -1,5 +1,5 @@
 //
-//  ProblemModel.swift
+//  SolutionModel.swift
 //  zayli
 //
 //  Created by rshier on 12/07/19.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Problem: Object {
+class Solution: Object {
     @objc dynamic var name = ""
-    let practice = LinkingObjects(fromType: Practice.self, property: "problems")
+    let practice = LinkingObjects(fromType: Practice.self, property: "solutions")
 }
