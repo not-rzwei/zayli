@@ -14,6 +14,9 @@ class NewPracticeViewController: FormViewController {
     // MARK: - Form Outlet
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBAction func saveAction(_ sender: Any) {
+        print(form.values())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,7 @@ class NewPracticeViewController: FormViewController {
     }
     
     func setupUI(){
-        saveButton.isEnabled = false
+//        saveButton.isEnabled = false
         
         setupForm()
     }
@@ -37,13 +40,14 @@ class NewPracticeViewController: FormViewController {
         +++ MultivaluedSection(
                 multivaluedOptions: [.Insert, .Delete],
                 header: "Problems") {
-            $0.tag = "solutions"
+            $0.tag = "problems"
                     
             $0.addButtonProvider = { section in
                 return ButtonRow(){
                     $0.title = "Add problem"
                 }
             }
+            
             $0.multivaluedRowToInsertAt = { index in
                 return TextRow() {
                     $0.placeholder = "Specify the problem"
@@ -56,17 +60,17 @@ class NewPracticeViewController: FormViewController {
             header: "Solutions") {
                 $0.tag = "solutions"
                 
-                $0.addButtonProvider = { section in
-                    return ButtonRow(){
-                        $0.title = "Add solution"
-                    }
+            $0.addButtonProvider = { section in
+                return ButtonRow(){
+                    $0.title = "Add solution"
                 }
-                $0.multivaluedRowToInsertAt = { index in
-                    return TextRow() {
-                        $0.placeholder = "Propose your solution"
-                    }
+            }
+            
+            $0.multivaluedRowToInsertAt = { index in
+                return TextRow() {
+                    $0.placeholder = "Propose your solution"
                 }
-                
+            }
         }
         
         

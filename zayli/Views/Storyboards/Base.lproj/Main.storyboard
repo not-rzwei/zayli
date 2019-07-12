@@ -72,7 +72,11 @@
                         <viewLayoutGuide key="safeArea" id="JrT-Gp-l0r"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Practice" id="PjU-Zg-rPI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EZC-ai-lC0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EZC-ai-lC0">
+                            <connections>
+                                <action selector="saveAction:" destination="iDe-OQ-sps" id="JKy-Do-uaD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="saveButton" destination="EZC-ai-lC0" id="ZFg-Lz-fRS"/>
