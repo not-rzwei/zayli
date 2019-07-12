@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import Eureka
 
-class NewPracticeViewController: UITableViewController {
-
-    // MARK: - Form Outlets
-
-    @IBOutlet weak var ideaInput: UITextField!
-    @IBOutlet weak var problemInput: UITextField!
-    @IBOutlet weak var solutionInput: UITextField!
-    @IBOutlet weak var summaryInput: UITextView!
+class NewPracticeViewController: FormViewController {
+    
+    // MARK: - Form Outlet
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    func setupUI(){
+        setupForm()
+    }
+    
+    func setupForm() {
+        form
+        +++ Section("idea")
+        <<< TextRow("idea"){ row in
+            row.placeholder = "Input your idea"
+        }
+        
+        +++ Section("problem")
+            <<< TextRow("problem"){ row in
+                row.placeholder = "Specify your problem"
+        }
+        
+        +++ Section("solution")
+            <<< TextRow("solution"){ row in
+                row.placeholder = "Propose your solution"
+        }
+        
+        +++ Section("summary")
+            <<< TextAreaRow("summary"){ row in
+                row.placeholder = "Write your idea's summary"
+        }
     }
 
 }

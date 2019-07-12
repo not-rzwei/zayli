@@ -7,5 +7,7 @@ target 'zayli' do
 
   # Pods for zayli
   pod 'RealmSwift'
+  pod 'Eureka'
+
 
 end
