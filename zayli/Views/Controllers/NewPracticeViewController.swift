@@ -14,7 +14,10 @@ class NewPracticeViewController: FormViewController {
     
     // MARK: - Form Outlet
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         let problems = form.getMultivaluedSection("problems") as! Array<String>
         let solutions = form.getMultivaluedSection("solutions")

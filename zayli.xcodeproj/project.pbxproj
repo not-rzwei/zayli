@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */; };
+		2905F3EB22DC34A3006E4FA3 /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */; };
 		293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293376A422D801F300F7A546 /* NewPracticeViewController.swift */; };
 		2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451222D8693E0096BE6A /* PracticeModel.swift */; };
 		2942451522D870190096BE6A /* ProblemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451422D870190096BE6A /* ProblemModel.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTableCell.swift; sourceTree = "<group>"; };
+		2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		293376A422D801F300F7A546 /* NewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPracticeViewController.swift; sourceTree = "<group>"; };
 		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Models/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
 		2942451422D870190096BE6A /* ProblemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProblemModel.swift; path = zayli/Models/ProblemModel.swift; sourceTree = SOURCE_ROOT; };
@@ -144,6 +146,7 @@
 			children = (
 				29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */,
 				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
+				2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2905F3EB22DC34A3006E4FA3 /* PracticeDetailViewController.swift in Sources */,
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,

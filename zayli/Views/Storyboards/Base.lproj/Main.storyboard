@@ -56,14 +56,46 @@
                     <navigationItem key="navigationItem" title="Practice" id="pdk-n8-k9u">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3P-oQ-cMa">
                             <connections>
-                                <segue destination="iDe-OQ-sps" kind="show" id="k0O-L6-tHz"/>
+                                <segue destination="TUy-h7-3bm" kind="presentation" id="k0O-L6-tHz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Ztn-pc-eSQ" kind="show" identifier="GoPracticeDetail" id="caG-MH-gDO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhg-gk-SXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="129.91071428571428"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="I8A-md-fo2">
+            <objects>
+                <tableViewController id="Ztn-pc-eSQ" customClass="PracticeDetailViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lOV-xl-eV0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Sja-4j-dcG">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sja-4j-dcG" id="Xd8-SE-Z4g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ztn-pc-eSQ" id="YrD-ag-7EO"/>
+                            <outlet property="delegate" destination="Ztn-pc-eSQ" id="evo-DO-6Hv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="T8W-Xy-Koc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99K-BS-lwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="130"/>
         </scene>
         <!--New Practice-->
         <scene sceneID="lZa-Z7-ecb">
@@ -75,25 +107,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JrT-Gp-l0r"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Practice" id="PjU-Zg-rPI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EZC-ai-lC0">
-                            <connections>
-                                <action selector="saveAction:" destination="iDe-OQ-sps" id="JKy-Do-uaD"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="New Practice" largeTitleDisplayMode="never" id="BIY-42-XnY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zLA-AB-0tO"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SuE-UW-8iy"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="saveButton" destination="EZC-ai-lC0" id="ZFg-Lz-fRS"/>
-                    </connections>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5C-UR-PJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="842"/>
+            <point key="canvasLocation" x="1002.8985507246377" y="841.74107142857144"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root Navigation-->
         <scene sceneID="ogl-sp-364">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XxC-aR-6jX" sceneMemberID="viewController">
+                <navigationController title="Root Navigation" automaticallyAdjustsScrollViewInsets="NO" id="XxC-aR-6jX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="yHl-uj-tjK">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -107,6 +134,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msp-eY-t74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-817.39130434782612" y="129.91071428571428"/>
+        </scene>
+        <!--New Practice Navigation-->
+        <scene sceneID="BBR-Vd-zBa">
+            <objects>
+                <navigationController title="New Practice Navigation" automaticallyAdjustsScrollViewInsets="NO" id="TUy-h7-3bm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3No-kf-XbX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iDe-OQ-sps" kind="relationship" relationship="rootViewController" id="Yib-Up-2YC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vz6-lt-ocO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="841.74107142857144"/>
         </scene>
     </scenes>
 </document>
