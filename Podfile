@@ -9,5 +9,6 @@ target 'zayli' do
   pod 'RealmSwift'
   pod 'Eureka'
   pod 'RxSwift'
+  pod 'SwiftDate', '~> 5.0'
 
 end

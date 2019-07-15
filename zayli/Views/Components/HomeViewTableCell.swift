@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 class HomeViewTableCell: UITableViewCell {
 
@@ -17,6 +18,7 @@ class HomeViewTableCell: UITableViewCell {
     func populate(with practice: Practice) {
         id = practice.id
         titleLabel.text = practice.idea
+        dateLabel.text = Date(timeIntervalSince1970: practice.timestamp).toRelative()
     }
     
     override func awakeFromNib() {
@@ -25,8 +27,8 @@ class HomeViewTableCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        print("selected")
     }
 
 }
