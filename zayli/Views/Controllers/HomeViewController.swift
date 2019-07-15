@@ -22,29 +22,35 @@ class HomeViewController: UITableViewController {
     func setupData() {
         let realm = try! Realm()
         
-        practices = realm.objects(Practice.self)
+        practices = realm.objects(Practice.self).sorted(
+            byKeyPath: "timestamp", ascending: false
+        )
     }
     
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "GoPracticeDetail":
+            let practiceDetail = segue.destination as! PracticeDetailViewController
+            practiceDetail.practice = sender as? Practice
+        default:
+            return
+        }
      }
-     */
 }
 
 // Mark: - Table-related stuff
 
 extension HomeViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let practice = practices![indexPath.row] as Practice
+        
+        self.performSegue(withIdentifier: "GoPracticeDetail", sender: practice)
+    }
 
     // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Practice"
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

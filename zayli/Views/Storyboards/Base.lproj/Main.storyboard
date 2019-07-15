@@ -108,8 +108,16 @@
                         <viewLayoutGuide key="safeArea" id="JrT-Gp-l0r"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Practice" largeTitleDisplayMode="never" id="BIY-42-XnY">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zLA-AB-0tO"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SuE-UW-8iy"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zLA-AB-0tO">
+                            <connections>
+                                <action selector="cancelAction:" destination="iDe-OQ-sps" id="du5-jG-EzN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="SuE-UW-8iy">
+                            <connections>
+                                <action selector="saveAction:" destination="iDe-OQ-sps" id="SIW-rG-iz5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
