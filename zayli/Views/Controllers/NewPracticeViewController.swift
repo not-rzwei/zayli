@@ -56,6 +56,8 @@ class NewPracticeViewController: FormViewController {
         rules.add(rule: RuleRequired())
         rules.add(rule: RuleMinLength(minLength: 5))
         
+        tableView.isEditing = true
+        
         form
         +++ Section("idea")
         <<< TextRow("idea"){ row in
