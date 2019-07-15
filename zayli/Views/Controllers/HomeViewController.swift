@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UITableViewController {
 
+    private var practices: Results<Practice>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        setupData()
     }
     
-    func setupUI() {
+    func setupData() {
+        let realm = try! Realm()
         
+        practices = realm.objects(Practice.self)
     }
     
     /*
@@ -46,18 +51,17 @@ extension HomeViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.practices?.count ?? 0
     }
 
     
     // MARK: - Table cell configuration
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PracticeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PracticeCell", for: indexPath) as! HomeViewTableCell
+        let practice = practices![indexPath.row] as Practice
         
-        cell.textLabel?.text = "Blockchain Technology"
-        cell.detailTextLabel?.text = "19/09/09"
-        cell.detailTextLabel?.textColor = .gray
+        cell.populate(with: practice)
 
         return cell
     }
