@@ -20,23 +20,24 @@ class NewPracticeViewController: FormViewController {
         let solutions = form.getMultivaluedSection("solutions")
         
         let practice = Practice()
-        
+
         practice.idea = form.valueByTag("idea")
         practice.background = form.valueByTag("background")
         practice.target = form.valueByTag("target")
         practice.summary = form.valueByTag("summary")
-        
+
         problems.forEach { problem in
             let obj = Problem(value: [problem])
             practice.problems.append(obj)
         }
-        
+
         solutions.forEach { solution in
             let obj = Solution(value: [solution])
             practice.solutions.append(obj)
         }
-        
-        practice.writeAsync()
+
+        practice.write()
+        navigationController?.popViewController(animated: true)
         
     }
     
