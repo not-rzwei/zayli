@@ -84,6 +84,64 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2967704A22DDB46C00DB83FC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2967704E22DDB4A900DB83FC /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				2967705022DDB4C200DB83FC /* List */,
+				2967704F22DDB4B200DB83FC /* Add */,
+			);
+			name = Practice;
+			sourceTree = "<group>";
+		};
+		2967704F22DDB4B200DB83FC /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		2967705022DDB4C200DB83FC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		2967705122DDB4D100DB83FC /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				2967705322DDB4E100DB83FC /* List */,
+				2967705222DDB4DD00DB83FC /* Add */,
+			);
+			name = Recording;
+			sourceTree = "<group>";
+		};
+		2967705222DDB4DD00DB83FC /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				2967704222DD889800DB83FC /* NewRecordingViewController.swift */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		2967705322DDB4E100DB83FC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2967704522DD8CAF00DB83FC /* RecordingViewController.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
 		29743E9722D7E2F50013C9B4 = {
 			isa = PBXGroup;
 			children = (
@@ -157,11 +215,9 @@
 		29AF9A4422D7EDA700A35F6E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */,
-				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
-				2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */,
-				2967704222DD889800DB83FC /* NewRecordingViewController.swift */,
-				2967704522DD8CAF00DB83FC /* RecordingViewController.swift */,
+				2967705122DDB4D100DB83FC /* Recording */,
+				2967704E22DDB4A900DB83FC /* Practice */,
+				2967704A22DDB46C00DB83FC /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
