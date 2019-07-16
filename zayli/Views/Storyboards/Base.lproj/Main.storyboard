@@ -284,11 +284,57 @@
         <scene sceneID="G8W-i2-dzH">
             <objects>
                 <viewController id="TWM-Uq-g0w" customClass="NewRecordingViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NqY-p4-vAn">
+                    <view key="view" contentMode="scaleToFill" id="1ec-QA-CNT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="46F-fh-o68"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRe-Sm-5b8">
+                                <rect key="frame" x="20" y="506" width="374" height="57"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="l0q-zt-N5o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="startRecording:" destination="TWM-Uq-g0w" eventType="touchUpInside" id="TKM-Sh-kkq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record Timer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59a-la-Qre">
+                                <rect key="frame" x="20" y="252" width="374" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="BSP-JW-KyP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCy-Tp-5XP">
+                                <rect key="frame" x="20" y="571" width="374" height="57"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Q2h-bi-dgj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="TWM-Uq-g0w" eventType="touchUpInside" id="ek8-v5-F63"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eRe-Sm-5b8" firstAttribute="leading" secondItem="ncL-uo-RlS" secondAttribute="leading" constant="20" id="1nL-VY-L71"/>
+                            <constraint firstItem="59a-la-Qre" firstAttribute="top" secondItem="ncL-uo-RlS" secondAttribute="top" constant="164" id="HXu-hN-j47"/>
+                            <constraint firstItem="ncL-uo-RlS" firstAttribute="trailing" secondItem="HCy-Tp-5XP" secondAttribute="trailing" constant="20" id="T5D-v4-o17"/>
+                            <constraint firstItem="ncL-uo-RlS" firstAttribute="trailing" secondItem="eRe-Sm-5b8" secondAttribute="trailing" constant="20" id="Vvg-KA-eTS"/>
+                            <constraint firstItem="HCy-Tp-5XP" firstAttribute="top" secondItem="eRe-Sm-5b8" secondAttribute="bottom" constant="8" symbolic="YES" id="YOH-zP-QIi"/>
+                            <constraint firstItem="ncL-uo-RlS" firstAttribute="trailing" secondItem="59a-la-Qre" secondAttribute="trailing" constant="20" id="bv4-3a-s3b"/>
+                            <constraint firstItem="HCy-Tp-5XP" firstAttribute="leading" secondItem="ncL-uo-RlS" secondAttribute="leading" constant="20" id="fdI-Xb-84U"/>
+                            <constraint firstItem="59a-la-Qre" firstAttribute="leading" secondItem="ncL-uo-RlS" secondAttribute="leading" constant="20" id="gWZ-Hl-gIS"/>
+                            <constraint firstItem="eRe-Sm-5b8" firstAttribute="top" secondItem="59a-la-Qre" secondAttribute="bottom" constant="200" id="rY2-x7-XQP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ncL-uo-RlS"/>
                     </view>
                     <navigationItem key="navigationItem" id="tk1-bi-m4h">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V2s-45-n3m">
@@ -302,6 +348,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="recordingTimeLbl" destination="59a-la-Qre" id="ATP-nw-w12"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyk-Cq-Q0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

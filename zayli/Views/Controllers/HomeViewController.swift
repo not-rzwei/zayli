@@ -25,10 +25,6 @@ class HomeViewController: UITableViewController {
     }
     
     func setupData() {
-        // Autodelete realm if theres migration
-        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
-        Realm.Configuration.defaultConfiguration = config
-        
         practices = Realm.shared.objects(Practice.self).sorted(
             byKeyPath: "timestamp", ascending: false
         )
