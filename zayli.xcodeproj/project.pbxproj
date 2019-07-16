@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */; };
-		2905F3EB22DC34A3006E4FA3 /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */; };
 		293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293376A422D801F300F7A546 /* NewPracticeViewController.swift */; };
 		2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451222D8693E0096BE6A /* PracticeModel.swift */; };
 		2942451522D870190096BE6A /* ProblemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451422D870190096BE6A /* ProblemModel.swift */; };
 		2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451922D879570096BE6A /* EurekaExtension.swift */; };
 		2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451B22D87CF00096BE6A /* SolutionModel.swift */; };
 		2942451E22D884570096BE6A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451D22D884570096BE6A /* RealmExtension.swift */; };
+		2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703C22DD6DB700DB83FC /* RecordModel.swift */; };
+		2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703E22DD6E4700DB83FC /* FeedbackModel.swift */; };
 		29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29743EA322D7E2F50013C9B4 /* AppDelegate.swift */; };
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
@@ -25,13 +26,14 @@
 
 /* Begin PBXFileReference section */
 		2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTableCell.swift; sourceTree = "<group>"; };
-		2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		293376A422D801F300F7A546 /* NewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPracticeViewController.swift; sourceTree = "<group>"; };
 		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Models/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
 		2942451422D870190096BE6A /* ProblemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProblemModel.swift; path = zayli/Models/ProblemModel.swift; sourceTree = SOURCE_ROOT; };
 		2942451922D879570096BE6A /* EurekaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaExtension.swift; sourceTree = "<group>"; };
 		2942451B22D87CF00096BE6A /* SolutionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionModel.swift; sourceTree = "<group>"; };
 		2942451D22D884570096BE6A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
+		2967703C22DD6DB700DB83FC /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		2967703E22DD6E4700DB83FC /* FeedbackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
 		29743EA022D7E2F50013C9B4 /* zayli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zayli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29743EA322D7E2F50013C9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29743EA822D7E2F50013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 				2942451222D8693E0096BE6A /* PracticeModel.swift */,
 				2942451422D870190096BE6A /* ProblemModel.swift */,
 				2942451B22D87CF00096BE6A /* SolutionModel.swift */,
+				2967703C22DD6DB700DB83FC /* RecordModel.swift */,
+				2967703E22DD6E4700DB83FC /* FeedbackModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,7 +150,6 @@
 			children = (
 				29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */,
 				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
-				2905F3EA22DC34A3006E4FA3 /* PracticeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,15 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2905F3EB22DC34A3006E4FA3 /* PracticeDetailViewController.swift in Sources */,
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,
+				2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 				29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */,
 				2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */,
 				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,
 				2942451522D870190096BE6A /* ProblemModel.swift in Sources */,
+				2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */,
 				293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
