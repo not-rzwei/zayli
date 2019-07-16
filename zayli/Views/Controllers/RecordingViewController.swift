@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RecordingViewController: UITableViewController {
+    
+    private var practice: Practice?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupData()
+        setupUI()
+    }
+    
+    func setupData(){
+        let id = getTempId()
+        
+        practice = Realm.shared.object(ofType: Practice.self, forPrimaryKey: id)
+    }
+    
+    func setupUI(){
+        title = practice?.idea
     }
     
 }

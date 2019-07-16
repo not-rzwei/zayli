@@ -23,7 +23,14 @@ class PracticeDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupData()
         setupUI()
+    }
+    
+    func setupData(){
+        let id = getTempId()
+        
+        practice = Realm.shared.object(ofType: Practice.self, forPrimaryKey: id)
     }
     
     func setupUI(){
@@ -33,9 +40,5 @@ class PracticeDetailViewController: UITableViewController {
         solutionLabel.text = "\(practice?.solutions.count) solution"
         targetLabel.text = practice?.target
         summaryLabel.text = practice?.summary
-    }
-    
-    func populate(_ practice: Practice){
-        self.practice = practice
     }
 }

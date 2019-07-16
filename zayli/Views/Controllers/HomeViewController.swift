@@ -29,26 +29,11 @@ class HomeViewController: UITableViewController {
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = config
         
-        let realm = try! Realm()
-        
-        practices = realm.objects(Practice.self).sorted(
+        practices = Realm.shared.objects(Practice.self).sorted(
             byKeyPath: "timestamp", ascending: false
         )
     }
     
-     // MARK: - Navigation
-    
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "GoPracticeDetail":
-            let practiceDetail = segue.destination as! PracticeDetailViewController
-            practiceDetail.populate(sender as! Practice)
-        case "GoRecordingDetail":
-            return
-        default:
-            return
-        }
-     }
 }
 
 // Mark: - Table-related stuff
@@ -56,15 +41,16 @@ class HomeViewController: UITableViewController {
 extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        let practice = practices![indexPath.row] as Practice
+        let practice = practices![indexPath.row]
+        setTempId(practice.id)
         
-        self.performSegue(withIdentifier: "GoPracticeDetail", sender: practice)
+        self.performSegue(withIdentifier: "GoPracticeDetail", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let practice = practices![indexPath.row] as Practice
-
-        self.performSegue(withIdentifier: "GoRecordingDetail", sender: practice)
+        let practice = practices![indexPath.row]
+        setTempId(practice.id)
+        self.performSegue(withIdentifier: "GoRecordingDetail", sender: self)
     }
 
     // MARK: - Table view data source

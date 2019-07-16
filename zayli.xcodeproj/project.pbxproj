@@ -19,6 +19,7 @@
 		2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */; };
 		2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704222DD889800DB83FC /* NewRecordingViewController.swift */; };
 		2967704622DD8CAF00DB83FC /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704522DD8CAF00DB83FC /* RecordingViewController.swift */; };
+		2967704922DDB13E00DB83FC /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704822DDB13E00DB83FC /* UIKitExtension.swift */; };
 		29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29743EA322D7E2F50013C9B4 /* AppDelegate.swift */; };
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		2967704222DD889800DB83FC /* NewRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordingViewController.swift; sourceTree = "<group>"; };
 		2967704522DD8CAF00DB83FC /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		2967704822DDB13E00DB83FC /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		29743EA022D7E2F50013C9B4 /* zayli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zayli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29743EA322D7E2F50013C9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29743EA822D7E2F50013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				2942451922D879570096BE6A /* EurekaExtension.swift */,
 				2942451D22D884570096BE6A /* RealmExtension.swift */,
+				2967704822DDB13E00DB83FC /* UIKitExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,
+				2967704922DDB13E00DB83FC /* UIKitExtension.swift in Sources */,
 				2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 				2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */,

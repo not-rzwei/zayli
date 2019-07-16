@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 extension Object {
+    
     func write(){
         let realm = try! Realm()
         
@@ -24,6 +25,10 @@ extension Object {
                 self.write()
             }
         }
-
     }
+    
+}
+
+extension Realm {
+    static let shared = try! Realm()
 }
