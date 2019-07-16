@@ -13,10 +13,15 @@ class HomeViewController: UITableViewController {
 
     private var practices: Results<Practice>?
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupData()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
     func setupData() {
@@ -29,15 +34,15 @@ class HomeViewController: UITableViewController {
     
      // MARK: - Navigation
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "GoPracticeDetail":
-            let practiceDetail = segue.destination as! PracticeDetailViewController
-            practiceDetail.practice = sender as? Practice
-        default:
-            return
-        }
-     }
+//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "GoPracticeDetail":
+//            let practiceDetail = segue.destination as! PracticeDetailViewController
+//            practiceDetail.practice = sender as? Practice
+//        default:
+//            return
+//        }
+//     }
 }
 
 // Mark: - Table-related stuff

@@ -40,7 +40,7 @@ class NewPracticeViewController: FormViewController {
         }
 
         practice.write()
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
