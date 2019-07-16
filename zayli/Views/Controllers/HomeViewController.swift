@@ -38,25 +38,31 @@ class HomeViewController: UITableViewController {
     
      // MARK: - Navigation
     
-//     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case "GoPracticeDetail":
-//            let practiceDetail = segue.destination as! PracticeDetailViewController
-//            practiceDetail.practice = sender as? Practice
-//        default:
-//            return
-//        }
-//     }
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "GoPracticeDetail":
+            let practiceDetail = segue.destination as! PracticeDetailViewController
+            practiceDetail.populate(sender as! Practice)
+        default:
+            return
+        }
+     }
 }
 
 // Mark: - Table-related stuff
 
 extension HomeViewController {
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let practice = practices![indexPath.row] as Practice
         
         self.performSegue(withIdentifier: "GoPracticeDetail", sender: practice)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let practice = practices![indexPath.row] as Practice
+
+        self.performSegue(withIdentifier: "GoRecordingDetail", sender: practice)
     }
 
     // MARK: - Table view data source
@@ -64,6 +70,7 @@ extension HomeViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.practices?.count ?? 0

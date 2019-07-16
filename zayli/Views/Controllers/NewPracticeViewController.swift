@@ -20,7 +20,7 @@ class NewPracticeViewController: FormViewController {
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         let problems = form.getMultivaluedSection("problems") as! Array<String>
-        let solutions = form.getMultivaluedSection("solutions")
+        let solutions = form.getMultivaluedSection("solutions") as! Array<String>
         
         let practice = Practice()
 
@@ -30,12 +30,14 @@ class NewPracticeViewController: FormViewController {
         practice.summary = form.valueByTag("summary")
 
         problems.forEach { problem in
-            let obj = Problem(value: [problem])
+            let obj = Problem()
+            obj.name = problem
             practice.problems.append(obj)
         }
 
         solutions.forEach { solution in
-            let obj = Solution(value: [solution])
+            let obj = Solution()
+            obj.name = solution
             practice.solutions.append(obj)
         }
 
