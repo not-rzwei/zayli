@@ -9,15 +9,30 @@
 import Foundation
 import UIKit
 import AVFoundation
+import RealmSwift
 
 class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
-    private let recordId = UUID().uuidString
+    private let recordId: String = UUID().uuidString
+    private var audioPath: URL!
     
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func doneAction(_ sender: Any) {
+        
+        let record = Record()
+        record.id = recordId
+        record.resource = audioPath.absoluteString
+        
+        let practice = Realm.shared.object(
+            ofType: Practice.self,
+            forPrimaryKey: getTempId())
+        
+        try! Realm.shared.write {
+            practice?.records.append(record)
+        }
+
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -67,7 +82,7 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
         if audioRecorder == nil
         {
             let audioFilename = recordId + ".m4a"
-            let audioPath = getDocumentsDirectory().appendingPathComponent(audioFilename)
+            audioPath = getDocumentsDirectory().appendingPathComponent(audioFilename)
             print("Recording saved at :"+audioPath.absoluteString)
             
             let settings = [

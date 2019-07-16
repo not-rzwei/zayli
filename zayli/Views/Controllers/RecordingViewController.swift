@@ -8,10 +8,12 @@
 
 import UIKit
 import RealmSwift
+import SwiftDate
 
 class RecordingViewController: UITableViewController {
     
     private var practice: Practice?
+    private var records: Results<Record>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,34 @@ class RecordingViewController: UITableViewController {
         let id = getTempId()
         
         practice = Realm.shared.object(ofType: Practice.self, forPrimaryKey: id)
+        records = practice?.records.sorted(byKeyPath: "timestamp", ascending: false)
     }
     
     func setupUI(){
         title = practice?.idea
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+}
+
+extension RecordingViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return records?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
+        let record = records?[indexPath.row]
+        
+        cell.textLabel?.text = "Record \(records!.count - indexPath.row)"
+        cell.detailTextLabel?.text = Date(timeIntervalSince1970: record!.timestamp).toRelative()
+        
+        return cell
     }
     
 }
