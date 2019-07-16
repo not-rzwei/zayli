@@ -29,12 +29,10 @@ class PracticeDetailViewController: UITableViewController {
     func setupUI(){
         ideaLabel.text = practice?.idea
         backgroundLabel.text = practice?.background
-        problemLabel.text = "\(practice!.problems.count) problem"
-        solutionLabel.text = "\(practice!.solutions.count) solution"
+        problemLabel.text = "\(practice?.problems.count) problem"
+        solutionLabel.text = "\(practice?.solutions.count) solution"
         targetLabel.text = practice?.target
         summaryLabel.text = practice?.summary
-        
-        print(practice)
     }
     
     func populate(_ practice: Practice){

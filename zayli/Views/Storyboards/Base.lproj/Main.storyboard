@@ -248,7 +248,7 @@
         <!--Recording Detail-->
         <scene sceneID="OAu-cO-Yp2">
             <objects>
-                <tableViewController title="Recording Detail" id="4gC-p0-1Wf" sceneMemberID="viewController">
+                <tableViewController title="Recording Detail" id="4gC-p0-1Wf" customClass="RecordingViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rke-es-NNj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,10 +268,44 @@
                             <outlet property="delegate" destination="4gC-p0-1Wf" id="khh-Hs-fc0"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Recording" largeTitleDisplayMode="never" id="Zw5-fy-av1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xSH-jn-rkZ">
+                            <connections>
+                                <segue destination="uKp-ex-xK3" kind="presentation" id="LwO-TM-Oje"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGB-9j-roo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="-257"/>
+        </scene>
+        <!--New Recording View Controller-->
+        <scene sceneID="G8W-i2-dzH">
+            <objects>
+                <viewController id="TWM-Uq-g0w" customClass="NewRecordingViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NqY-p4-vAn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="46F-fh-o68"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tk1-bi-m4h">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V2s-45-n3m">
+                            <connections>
+                                <action selector="cancelAction:" destination="TWM-Uq-g0w" id="uai-bn-EEZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="d5f-rh-ARL">
+                            <connections>
+                                <action selector="doneAction:" destination="TWM-Uq-g0w" id="Jgu-0A-BsP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyk-Cq-Q0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2962" y="-257"/>
         </scene>
         <!--New Practice-->
         <scene sceneID="lZa-Z7-ecb">
@@ -336,6 +370,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vz6-lt-ocO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="841.74107142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9FB-7r-dAr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uKp-ex-xK3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fNc-VE-aYI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TWM-Uq-g0w" kind="relationship" relationship="rootViewController" id="wVC-sG-Qos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL1-Gz-AEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076.8115942028985" y="-257.14285714285711"/>
         </scene>
     </scenes>
 </document>

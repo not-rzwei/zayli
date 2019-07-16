@@ -43,6 +43,8 @@ class HomeViewController: UITableViewController {
         case "GoPracticeDetail":
             let practiceDetail = segue.destination as! PracticeDetailViewController
             practiceDetail.populate(sender as! Practice)
+        case "GoRecordingDetail":
+            return
         default:
             return
         }
