@@ -1,26 +1,23 @@
 PODS:
-  - Alertift (4.1)
   - Eureka (5.0.0)
-  - Realm (3.15.0):
-    - Realm/Headers (= 3.15.0)
-  - Realm/Headers (3.15.0)
-  - RealmSwift (3.15.0):
-    - Realm (= 3.15.0)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
+  - RealmSwift (3.17.1):
+    - Realm (= 3.17.1)
   - RxSwift (5.0.0)
   - SwiftDate (5.1.0)
   - SwiftySound (1.1.0)
 
 DEPENDENCIES:
-  - Alertift (~> 4.1)
-  - Eureka
-  - RealmSwift
-  - RxSwift
+  - Eureka (~> 5.0)
+  - RealmSwift (~> 3.17)
+  - RxSwift (~> 5.0)
   - SwiftDate (~> 5.0)
-  - SwiftySound
+  - SwiftySound (~> 1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Alertift
     - Eureka
     - Realm
     - RealmSwift
@@ -29,14 +26,13 @@ SPEC REPOS:
     - SwiftySound
 
 SPEC CHECKSUMS:
-  Alertift: bfc526e0bb8be206c85d279287c3dd392b0fe312
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
-  Realm: 9b834e1be6062f544805252c812348872dc5d4ed
-  RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
+  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftySound: eb46cc2399cf7d94f58c372f38216e15e0a6de3e
 
-PODFILE CHECKSUM: d69109f430afd208587a4af8b4289d6193848508
+PODFILE CHECKSUM: b4eaa2f0ea543829dfb4a1ed3176daec955bd5eb
 
 COCOAPODS: 1.7.4

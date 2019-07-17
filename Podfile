@@ -6,9 +6,9 @@ target 'zayli' do
   use_frameworks!
 
   # Pods for zayli
-  pod 'RealmSwift'
-  pod 'Eureka'
-  pod 'RxSwift'
+  pod 'RealmSwift', '~> 3.17'
+  pod 'Eureka', '~> 5.0'
+  pod 'RxSwift', '~> 5.0'
   pod 'SwiftDate', '~> 5.0'
-  pod 'SwiftySound'
+  pod 'SwiftySound', '~> 1.1'
 end
