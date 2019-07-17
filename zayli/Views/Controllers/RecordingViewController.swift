@@ -64,6 +64,7 @@ extension RecordingViewController {
         let url = URL(string: record!.resource)!
         let number = records!.count - indexPath.row
         
+        setTempId(record!.id, key: "feedbackId")
         performSegue(withIdentifier: "GoNewFeedback", sender: nil)
         
 //        Sound.play(url: url)

@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import RealmSwift
 
 class NewFeedbackViewController: FormViewController {
     
@@ -16,6 +17,21 @@ class NewFeedbackViewController: FormViewController {
     }
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
+        let recordId = getTempId("feedbackId")
+        let record = Realm.shared.object(ofType: Record.self, forPrimaryKey: recordId)
+        
+        let feedback = Feedback()
+        feedback.name = form.valueByTag("name")
+        feedback.idea = form.valueByTag("idea")
+        feedback.understanding = form.valueByTag("understanding")
+        feedback.opinion = form.valueByTag("opinion")
+        feedback.emotion = form.valueByTag("emotion")
+        
+        try! Realm.shared.write {
+            record?.feedbacks.append(feedback)
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

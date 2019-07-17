@@ -46,6 +46,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let practice = practices![indexPath.row]
         setTempId(practice.id)
+        
         self.performSegue(withIdentifier: "GoRecordingDetail", sender: self)
     }
 
