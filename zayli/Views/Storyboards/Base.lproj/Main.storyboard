@@ -661,6 +661,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Feedback List" id="ybh-sE-uk9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lvD-q4-EK9">
+                            <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="ooG-hQ-s9G" kind="presentation" id="hM3-p7-07I"/>
                             </connections>
@@ -672,4 +673,5 @@
             <point key="canvasLocation" x="2211.594202898551" y="160.71428571428569"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
