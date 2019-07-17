@@ -14,6 +14,7 @@
 		2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451922D879570096BE6A /* EurekaExtension.swift */; };
 		2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451B22D87CF00096BE6A /* SolutionModel.swift */; };
 		2942451E22D884570096BE6A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451D22D884570096BE6A /* RealmExtension.swift */; };
+		295C879322DECACB0048B8CF /* NewFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */; };
 		2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703C22DD6DB700DB83FC /* RecordModel.swift */; };
 		2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703E22DD6E4700DB83FC /* FeedbackModel.swift */; };
 		2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */; };
@@ -36,6 +37,7 @@
 		2942451922D879570096BE6A /* EurekaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaExtension.swift; sourceTree = "<group>"; };
 		2942451B22D87CF00096BE6A /* SolutionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionModel.swift; sourceTree = "<group>"; };
 		2942451D22D884570096BE6A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
+		295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedbackViewController.swift; sourceTree = "<group>"; };
 		2967703C22DD6DB700DB83FC /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		2967703E22DD6E4700DB83FC /* FeedbackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
 		2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 				2967704822DDB13E00DB83FC /* UIKitExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		295C879122DECA9C0048B8CF /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */,
+			);
+			name = Feedback;
 			sourceTree = "<group>";
 		};
 		2967704A22DDB46C00DB83FC /* Home */ = {
@@ -183,6 +193,7 @@
 		29AF9A4422D7EDA700A35F6E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				295C879122DECA9C0048B8CF /* Feedback */,
 				2967705122DDB4D100DB83FC /* Recording */,
 				2967704E22DDB4A900DB83FC /* Practice */,
 				2967704A22DDB46C00DB83FC /* Home */,
@@ -330,6 +341,7 @@
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 				2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */,
 				29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */,
+				295C879322DECACB0048B8CF /* NewFeedbackViewController.swift in Sources */,
 				2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */,
 				2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */,
 				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,

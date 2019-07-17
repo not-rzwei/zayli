@@ -9,6 +9,8 @@
 import UIKit
 import RealmSwift
 import SwiftDate
+import SwiftySound
+import Alertift
 
 class RecordingViewController: UITableViewController {
     
@@ -49,11 +51,23 @@ extension RecordingViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
         let record = records?[indexPath.row]
+        let number = records!.count - indexPath.row
         
-        cell.textLabel?.text = "Record \(records!.count - indexPath.row)"
+        cell.textLabel?.text = "Record \(number)"
         cell.detailTextLabel?.text = Date(timeIntervalSince1970: record!.timestamp).toRelative()
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let record = records?[indexPath.row]
+        let url = URL(string: record!.resource)!
+        let number = records!.count - indexPath.row
+        
+        performSegue(withIdentifier: "GoNewFeedback", sender: nil)
+        
+//        Sound.play(url: url)
+        
     }
     
 }
