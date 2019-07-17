@@ -11,6 +11,4 @@ target 'zayli' do
   pod 'RxSwift'
   pod 'SwiftDate', '~> 5.0'
   pod 'SwiftySound'
-  pod 'Alertift', '~> 4.1'
-
 end
