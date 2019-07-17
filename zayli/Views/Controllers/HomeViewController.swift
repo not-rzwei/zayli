@@ -43,6 +43,7 @@ extension HomeViewController {
         self.performSegue(withIdentifier: "GoPracticeDetail", sender: self)
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let practice = practices![indexPath.row]
         setTempId(practice.id)
@@ -62,7 +63,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PracticeCell", for: indexPath) as! HomeViewTableCell
         let practice = practices![indexPath.row] as Practice
-        
+
         cell.populate(with: practice)
 
         return cell

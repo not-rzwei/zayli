@@ -22,3 +22,27 @@ extension UIViewController {
         return ""
     }
 }
+
+@IBDesignable
+class MyPrettyDesignableView: UIView {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+            self.layer.masksToBounds = true
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) {
+        didSet {
+            self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+}
