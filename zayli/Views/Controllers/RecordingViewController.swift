@@ -49,12 +49,11 @@ extension RecordingViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
-        let record = records?[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordingViewTableViewCell
+        let record = records?[indexPath.row] as! Record
         let number = records!.count - indexPath.row
         
-        cell.textLabel?.text = "Record \(number)"
-        cell.detailTextLabel?.text = Date(timeIntervalSince1970: record!.timestamp).toRelative()
+        cell.populate(record, number)
         
         return cell
     }

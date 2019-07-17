@@ -48,6 +48,6 @@ class HomeViewTableCell: UITableViewCell {
     }
 
     @IBAction func detailAction(_ sender: UIButton) {
-        
+        UserDefaults.standard.set(id, forKey: "tempId")
     }
 }

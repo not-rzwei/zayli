@@ -31,14 +31,16 @@ class PracticeDetailViewController: UITableViewController {
         let id = getTempId()
         
         practice = Realm.shared.object(ofType: Practice.self, forPrimaryKey: id)
+        print(practice)
     }
     
     func setupUI(){
         ideaLabel.text = practice?.idea
         backgroundLabel.text = practice?.background
-        problemLabel.text = "\(practice?.problems.count) problem"
-        solutionLabel.text = "\(practice?.solutions.count) solution"
+        problemLabel.text = "Problem"
+        solutionLabel.text = "Solution"
         targetLabel.text = practice?.target
         summaryLabel.text = practice?.summary
+        
     }
 }
