@@ -8,9 +8,7 @@
 
 import UIKit
 import RealmSwift
-import SwiftDate
 import SwiftySound
-import Alertift
 
 class RecordingViewController: UITableViewController {
     
@@ -60,11 +58,9 @@ extension RecordingViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let record = records?[indexPath.row]
-        let url = URL(string: record!.resource)!
-        let number = records!.count - indexPath.row
         
-        setTempId(record!.id, key: "feedbackId")
-        performSegue(withIdentifier: "GoNewFeedback", sender: nil)
+        setTempId(record!.id, key: "recordId")
+        performSegue(withIdentifier: "GoFeedbackList", sender: nil)
         
 //        Sound.play(url: url)
         

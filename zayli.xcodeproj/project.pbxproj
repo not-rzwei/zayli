@@ -16,6 +16,8 @@
 		2942451E22D884570096BE6A /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451D22D884570096BE6A /* RealmExtension.swift */; };
 		295C879322DECACB0048B8CF /* NewFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */; };
 		295C879522DEFB6A0048B8CF /* RecordingViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879422DEFB6A0048B8CF /* RecordingViewTableViewCell.swift */; };
+		295C879722DF07BA0048B8CF /* FeedbackViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879622DF07BA0048B8CF /* FeedbackViewTableViewCell.swift */; };
+		295C879B22DF08CE0048B8CF /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */; };
 		2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703C22DD6DB700DB83FC /* RecordModel.swift */; };
 		2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703E22DD6E4700DB83FC /* FeedbackModel.swift */; };
 		2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */; };
@@ -40,6 +42,8 @@
 		2942451D22D884570096BE6A /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedbackViewController.swift; sourceTree = "<group>"; };
 		295C879422DEFB6A0048B8CF /* RecordingViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewTableViewCell.swift; sourceTree = "<group>"; };
+		295C879622DF07BA0048B8CF /* FeedbackViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewTableViewCell.swift; sourceTree = "<group>"; };
+		295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		2967703C22DD6DB700DB83FC /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		2967703E22DD6E4700DB83FC /* FeedbackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
 		2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			children = (
 				2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */,
 				295C879422DEFB6A0048B8CF /* RecordingViewTableViewCell.swift */,
+				295C879622DF07BA0048B8CF /* FeedbackViewTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */,
+				295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -339,6 +345,8 @@
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,
+				295C879B22DF08CE0048B8CF /* FeedbackViewController.swift in Sources */,
+				295C879722DF07BA0048B8CF /* FeedbackViewTableViewCell.swift in Sources */,
 				2967704922DDB13E00DB83FC /* UIKitExtension.swift in Sources */,
 				2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,

@@ -17,7 +17,7 @@ class NewFeedbackViewController: FormViewController {
     }
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
-        let recordId = getTempId("feedbackId")
+        let recordId = getTempId("recordId")
         let record = Realm.shared.object(ofType: Record.self, forPrimaryKey: recordId)
         
         let feedback = Feedback()
