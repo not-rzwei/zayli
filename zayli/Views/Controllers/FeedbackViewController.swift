@@ -26,11 +26,16 @@ class FeedbackViewController: UITableViewController {
         
         feedbacks = record?.feedbacks.sorted(byKeyPath: "timestamp", ascending: false)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return feedbacks?.count ?? 0
     }
     
