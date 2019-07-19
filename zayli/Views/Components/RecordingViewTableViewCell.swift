@@ -24,8 +24,8 @@ class RecordingViewTableViewCell: UITableViewCell {
         url = record.resource
         
         titleLabel.text = "Record \(number)"
-        feedbackLabel.text = "\(record.feedbacks.count) feedbacks"
-        dateLabel.text = Date(timeIntervalSince1970: record.timestamp).toRelative()
+        feedbackLabel.text = "Got \(record.feedbacks.count) feedbacks"
+        dateLabel.text = "Created " + Date(timeIntervalSince1970: record.timestamp).toRelative()
     }
     
     override func awakeFromNib() {

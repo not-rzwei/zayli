@@ -307,7 +307,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djb-gm-QZZ">
-                                                    <rect key="frame" x="25" y="53" width="218" height="15"/>
+                                                    <rect key="frame" x="25" y="51" width="218" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,7 +451,7 @@
                                 <action selector="cancelAction:" destination="ugc-g8-S5q" id="kYq-7W-kPd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="FjJ-JS-BQ3">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="FjJ-JS-BQ3">
                             <connections>
                                 <action selector="doneAction:" destination="ugc-g8-S5q" id="bqT-9l-EYy"/>
                             </connections>
