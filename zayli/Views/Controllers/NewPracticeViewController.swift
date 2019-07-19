@@ -13,6 +13,7 @@ import RealmSwift
 class NewPracticeViewController: FormViewController {
     
     // MARK: - Form Outlet
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -52,6 +53,22 @@ class NewPracticeViewController: FormViewController {
         setupForm()
     }
     
+    func formValidate(){
+        var errorCount = 0
+        
+        form.allRows.flatMap { row in
+            let error = row.validate()
+            
+            if !error.isEmpty {
+                errorCount += 1
+            }
+        }
+        
+        if errorCount == 0 {
+            doneButton.isEnabled = true
+        }
+    }
+    
     func setupForm() {
         
         var rules = RuleSet<String>()
@@ -59,16 +76,32 @@ class NewPracticeViewController: FormViewController {
         rules.add(rule: RuleMinLength(minLength: 5))
         
         tableView.isEditing = true
+        doneButton.isEnabled = false
+        
         
         form
         +++ Section("idea")
         <<< TextRow("idea"){ row in
-            row.placeholder = "Plastic Waste"
+            row.placeholder = "Beach Plastic Waste"
+            
+            row.add(ruleSet: rules)
+            row.validationOptions = .validatesOnDemand
+            
+            row.onChange { _ in
+                self.formValidate()
+            }
         }
             
         +++ Section("background problem")
         <<< TextRow("background"){ row in
             row.placeholder = "Garbage piles up"
+            
+            row.add(ruleSet: rules)
+            row.validationOptions = .validatesOnDemand
+            
+            row.onChange { _ in
+                self.formValidate()
+            }
         }
 
         +++ MultivaluedSection(
@@ -86,6 +119,24 @@ class NewPracticeViewController: FormViewController {
             $0.multivaluedRowToInsertAt = { index in
                 return TextRow() {
                     $0.placeholder = "Damage to marine ecosystem"
+                    
+                    $0.add(ruleSet: rules)
+                    $0.validationOptions = .validatesOnDemand
+                    
+                    $0.onChange { _ in
+                        self.formValidate()
+                    }
+                }
+            }
+                    
+            $0 <<< TextRow() {
+                $0.placeholder = "Damage to marine ecosystem"
+                
+                $0.add(ruleSet: rules)
+                $0.validationOptions = .validatesOnDemand
+                
+                $0.onChange { _ in
+                    self.formValidate()
                 }
             }
         }
@@ -105,6 +156,24 @@ class NewPracticeViewController: FormViewController {
             $0.multivaluedRowToInsertAt = { index in
                 return TextRow() {
                     $0.placeholder = "Waste sorting"
+                    
+                    $0.add(ruleSet: rules)
+                    $0.validationOptions = .validatesOnDemand
+                    
+                    $0.onChange { _ in
+                        self.formValidate()
+                    }
+                }
+            }
+            
+            $0 <<< TextRow() {
+                $0.placeholder = "Waste sorting"
+                
+                $0.add(ruleSet: rules)
+                $0.validationOptions = .validatesOnDemand
+                
+                $0.onChange { _ in
+                    self.formValidate()
                 }
             }
         }
@@ -112,11 +181,25 @@ class NewPracticeViewController: FormViewController {
         +++ Section("target user")
         <<< TextRow("target"){ row in
             row.placeholder = "Beach visitor"
+            
+            row.add(ruleSet: rules)
+            row.validationOptions = .validatesOnDemand
+            
+            row.onChange { _ in
+                self.formValidate()
+            }
         }
         
         +++ Section("summary")
         <<< TextAreaRow("summary"){ row in
             row.placeholder = "Plastic has been found in more than 60% of all seabirds and ..."
+            
+            row.add(ruleSet: rules)
+            row.validationOptions = .validatesOnDemand
+            
+            row.onChange { _ in
+                self.formValidate()
+            }
         }
         
         
