@@ -86,7 +86,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Ideas" id="pdk-n8-k9u">
-                        <barButtonItem key="rightBarButtonItem" title="New Idea" id="X3P-oQ-cMa">
+                        <barButtonItem key="rightBarButtonItem" title="New Idea" systemItem="add" id="X3P-oQ-cMa">
                             <connections>
                                 <segue destination="TUy-h7-3bm" kind="presentation" identifier="GoNewPractice" id="k0O-L6-tHz"/>
                             </connections>
