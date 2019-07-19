@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import Eureka
 
-class FeedbackDetailViewController: UIViewController {
+class FeedbackDetailViewController: FormViewController {
 
     private var feedback: Feedback!
     
@@ -28,6 +29,27 @@ class FeedbackDetailViewController: UIViewController {
     
     func setupUI(){
         title = "From " + feedback.name
+        
+        form
+        +++ Section("Name")
+        <<< LabelRow(){ row in
+            row.title = feedback.name
+        }
+            
+        +++ Section("emotion")
+        <<< LabelRow(){ row in
+            row.title = feedback.emotion
+        }
+            
+        +++ Section("Understanding")
+        <<< TextAreaRow(){ row in
+                row.value = feedback.understanding
+        }
+        
+        +++ Section("story delivering")
+        <<< TextAreaRow(){ row in
+            row.value = feedback.opinion
+        }
     }
 
 }

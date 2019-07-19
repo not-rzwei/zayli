@@ -276,11 +276,11 @@
             </objects>
             <point key="canvasLocation" x="1230" y="463"/>
         </scene>
-        <!--Title-->
+        <!--Feedback Detail-->
         <scene sceneID="AcZ-VT-uWt">
             <objects>
-                <viewController id="n2e-px-aJK" customClass="FeedbackDetailViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NLf-AM-wY0">
+                <viewController title="Feedback Detail" id="n2e-px-aJK" customClass="FeedbackDetailViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="NLf-AM-wY0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
