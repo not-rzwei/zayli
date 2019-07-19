@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29057F9422E1CDED00D44B40 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */; };
 		2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */; };
 		293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293376A422D801F300F7A546 /* NewPracticeViewController.swift */; };
 		2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451222D8693E0096BE6A /* PracticeModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedbackDetailViewController.swift; path = ../../../../../../../../../System/Volumes/Data/Users/rshier/Documents/Code/Swift/zayli/zayli/Views/Controllers/FeedbackDetailViewController.swift; sourceTree = "<group>"; };
 		2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTableCell.swift; sourceTree = "<group>"; };
 		293376A422D801F300F7A546 /* NewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPracticeViewController.swift; sourceTree = "<group>"; };
 		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Models/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
@@ -101,6 +103,7 @@
 			children = (
 				295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */,
 				295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */,
+				29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,
 				2967704622DD8CAF00DB83FC /* RecordingViewController.swift in Sources */,
 				2942451522D870190096BE6A /* ProblemModel.swift in Sources */,
+				29057F9422E1CDED00D44B40 /* FeedbackDetailViewController.swift in Sources */,
 				2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */,
 				293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */,
 			);

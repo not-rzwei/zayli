@@ -49,6 +49,13 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         tableView.reloadData()
         self.reloadEmptyState()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feedback = feedbacks?[indexPath.row] as! Feedback
+        setTempId(feedback.id, key: "feedbackId")
+        
+        performSegue(withIdentifier: "GoFeedbackDetail", sender: nil)
+    }
 
     // MARK: - Table view data source
 

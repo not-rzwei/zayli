@@ -276,6 +276,22 @@
             </objects>
             <point key="canvasLocation" x="1230" y="463"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="AcZ-VT-uWt">
+            <objects>
+                <viewController id="n2e-px-aJK" customClass="FeedbackDetailViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NLf-AM-wY0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MyF-Pb-J9J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="btX-o2-Tma"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moe-nA-W1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="889"/>
+        </scene>
         <!--Recording Detail-->
         <scene sceneID="OAu-cO-Yp2">
             <objects>
@@ -644,12 +660,12 @@
         <scene sceneID="s1X-Ye-UU3">
             <objects>
                 <tableViewController id="mag-XU-taU" customClass="FeedbackViewController" customModule="zayli" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pcx-Zz-rJh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pcx-Zz-rJh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedbackCell" rowHeight="120" id="uCo-Et-ykP" customClass="FeedbackViewTableViewCell" customModule="zayli" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedbackCell" rowHeight="120" id="uCo-Et-ykP" customClass="FeedbackViewTableViewCell" customModule="zayli" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uCo-Et-ykP" id="19h-tS-ZrI">
@@ -707,6 +723,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="n2e-px-aJK" kind="show" identifier="GoFeedbackDetail" id="Lji-c4-PtE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjn-bH-Bfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
