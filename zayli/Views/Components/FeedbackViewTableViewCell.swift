@@ -10,14 +10,12 @@ import UIKit
 
 class FeedbackViewTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ideaLabel: UILabel!
-    @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     func populate(with feedback: Feedback){
-        ideaLabel.text = feedback.idea
-        emotionLabel.text = feedback.emotion
         nameLabel.text = feedback.name
+        dateLabel.text = "Created " + Date(timeIntervalSince1970: feedback.timestamp).toRelative()
     }
     
     override func awakeFromNib() {
