@@ -63,17 +63,18 @@ class NewPracticeViewController: FormViewController {
         form
         +++ Section("idea")
         <<< TextRow("idea"){ row in
-            row.placeholder = "Input your idea"
+            row.placeholder = "Plastic Waste"
         }
             
         +++ Section("background problem")
         <<< TextRow("background"){ row in
-            row.placeholder = "The big problem"
+            row.placeholder = "Garbage piles up"
         }
 
         +++ MultivaluedSection(
                 multivaluedOptions: [.Insert, .Delete],
-                header: "specific Problems") {
+                header: "specific Problems",
+                footer: "The small problems you encounter") {
             $0.tag = "problems"
                     
             $0.addButtonProvider = { section in
@@ -84,14 +85,15 @@ class NewPracticeViewController: FormViewController {
             
             $0.multivaluedRowToInsertAt = { index in
                 return TextRow() {
-                    $0.placeholder = "Specify the problem"
+                    $0.placeholder = "Damage to marine ecosystem"
                 }
             }
         }
             
         +++ MultivaluedSection(
             multivaluedOptions: [.Insert, .Delete],
-            header: "Solutions") {
+            header: "Solutions",
+            footer: "The solution for the problem") {
                 $0.tag = "solutions"
                 
             $0.addButtonProvider = { section in
@@ -102,19 +104,19 @@ class NewPracticeViewController: FormViewController {
             
             $0.multivaluedRowToInsertAt = { index in
                 return TextRow() {
-                    $0.placeholder = "Propose your solution"
+                    $0.placeholder = "Waste sorting"
                 }
             }
         }
             
         +++ Section("target user")
         <<< TextRow("target"){ row in
-            row.placeholder = "For whom?"
+            row.placeholder = "Beach visitor"
         }
         
         +++ Section("summary")
         <<< TextAreaRow("summary"){ row in
-            row.placeholder = "Write your idea's summary"
+            row.placeholder = "Plastic has been found in more than 60% of all seabirds and ..."
         }
         
         
