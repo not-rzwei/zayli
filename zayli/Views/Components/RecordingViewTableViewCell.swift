@@ -16,7 +16,6 @@ class RecordingViewTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var playLabel: UIButton!
     
     private var id: String!
     private var url: String!
@@ -35,13 +34,6 @@ class RecordingViewTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    
-    @IBAction func playAction(_ sender: Any) {
-        let fileUrl = URL(string: url)!
-
-        Sound.play(url: fileUrl)
     }
     
 }
