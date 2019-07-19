@@ -8,9 +8,9 @@
 
 import UIKit
 import RealmSwift
-import SwiftySound
+import UIEmptyState
 
-class RecordingViewController: UITableViewController {
+class RecordingViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate {
     
     private var practice: Practice?
     private var records: Results<Record>?
@@ -18,6 +18,7 @@ class RecordingViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupEmptyState()
         setupData()
         setupUI()
     }
@@ -33,9 +34,15 @@ class RecordingViewController: UITableViewController {
         title = practice?.idea
     }
     
+    func setupEmptyState(){
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        self.reloadEmptyState()
     }
     
 }
@@ -58,12 +65,34 @@ extension RecordingViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let record = records?[indexPath.row]
+        let number = records!.count - indexPath.row
         
         setTempId(record!.id, key: "recordId")
+        setTempId(String(describing: number), key: "recordNumber")
+        
         performSegue(withIdentifier: "GoFeedbackList", sender: nil)
         
-//        Sound.play(url: url)
+    }
+    
+}
+
+extension RecordingViewController {
+    var emptyStateTitle: NSAttributedString {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2)
+        ]
         
+        return NSAttributedString(string: "There is no Recording yet!", attributes: attrs)
+    }
+    
+    var emptyStateDetailMessage: NSAttributedString? {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)
+        ]
+        
+        return NSAttributedString(string: "You can add recording now", attributes: attrs)
     }
     
 }

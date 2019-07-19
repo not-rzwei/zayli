@@ -25,9 +25,9 @@ class HomeViewTableCell: UITableViewCell {
         let feedbackCount = calculateFeedback(practice.records)
         
         titleLabel.text = practice.idea
-        recordLabel.text = "\(practice.records.count) records"
-        feedbackLabel.text = "\(feedbackCount) feedbacks"
-        dateLabel.text = Date(timeIntervalSince1970: practice.timestamp).toRelative()
+        recordLabel.text = "Total of \(practice.records.count) recordings"
+        feedbackLabel.text = "Got \(feedbackCount) feedbacks"
+        dateLabel.text = "Created " + Date(timeIntervalSince1970: practice.timestamp).toRelative()
     }
     
     func calculateFeedback(_ records: List<Record>) -> Int{
@@ -47,7 +47,4 @@ class HomeViewTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    @IBAction func detailAction(_ sender: UIButton) {
-        UserDefaults.standard.set(id, forKey: "tempId")
-    }
 }
