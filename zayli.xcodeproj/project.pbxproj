@@ -30,6 +30,7 @@
 		29743EAE22D7E2F60013C9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */; };
 		29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */; };
 		A8E834FD74A6F62BCA118FCB /* Pods_zayli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C817D8F8A38D328861EEA162 /* Pods_zayli.framework */; };
+		BD21A03D22E1C39F0097DE9E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		29743EAF22D7E2F60013C9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC1DA1135BCA1FD6036CB21A /* Pods-zayli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zayli.release.xcconfig"; path = "Target Support Files/Pods-zayli/Pods-zayli.release.xcconfig"; sourceTree = "<group>"; };
+		BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		C817D8F8A38D328861EEA162 /* Pods_zayli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zayli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78E1485D326CEF9810335D0 /* Pods-zayli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zayli.debug.xcconfig"; path = "Target Support Files/Pods-zayli/Pods-zayli.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 		2967704A22DDB46C00DB83FC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */,
 				29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */,
 			);
 			name = Home;
@@ -349,6 +352,7 @@
 				295C879722DF07BA0048B8CF /* FeedbackViewTableViewCell.swift in Sources */,
 				2967704922DDB13E00DB83FC /* UIKitExtension.swift in Sources */,
 				2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */,
+				BD21A03D22E1C39F0097DE9E /* OnboardingViewController.swift in Sources */,
 				29743EA422D7E2F50013C9B4 /* AppDelegate.swift in Sources */,
 				295C879522DEFB6A0048B8CF /* RecordingViewTableViewCell.swift in Sources */,
 				2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */,
