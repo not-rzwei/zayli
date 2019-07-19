@@ -99,9 +99,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Ideas" id="pdk-n8-k9u">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3P-oQ-cMa">
+                        <barButtonItem key="rightBarButtonItem" title="New Idea" id="X3P-oQ-cMa">
                             <connections>
-                                <segue destination="TUy-h7-3bm" kind="presentation" id="k0O-L6-tHz"/>
+                                <segue destination="TUy-h7-3bm" kind="presentation" identifier="GoNewPractice" id="k0O-L6-tHz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -378,7 +378,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Recording" largeTitleDisplayMode="never" id="Zw5-fy-av1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xSH-jn-rkZ">
+                        <barButtonItem key="rightBarButtonItem" title="Add Recording" id="xSH-jn-rkZ">
                             <connections>
                                 <segue destination="uKp-ex-xK3" kind="presentation" id="LwO-TM-Oje"/>
                             </connections>
@@ -660,7 +660,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feedback List" id="ybh-sE-uk9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lvD-q4-EK9">
+                        <barButtonItem key="rightBarButtonItem" title="Add Feedback" id="lvD-q4-EK9">
                             <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="ooG-hQ-s9G" kind="presentation" id="hM3-p7-07I"/>

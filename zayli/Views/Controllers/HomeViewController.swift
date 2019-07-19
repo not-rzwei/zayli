@@ -8,17 +8,22 @@
 
 import UIKit
 import RealmSwift
+import UIEmptyState
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
     private var practices: Results<Practice>?
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        self.reloadEmptyState()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
         
         setupData()
         print(Realm.Configuration.defaultConfiguration.fileURL)
@@ -35,14 +40,6 @@ class HomeViewController: UITableViewController {
 // Mark: - Table-related stuff
 
 extension HomeViewController {
-    
-    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        let practice = practices![indexPath.row]
-        setTempId(practice.id)
-        
-        self.performSegue(withIdentifier: "GoPracticeDetail", sender: self)
-    }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let practice = practices![indexPath.row]
@@ -69,4 +66,41 @@ extension HomeViewController {
         return cell
     }
 
+}
+
+extension HomeViewController {
+    var emptyStateTitle: NSAttributedString {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2)
+        ]
+        
+        return NSAttributedString(string: "Let's Convey Your Idea!", attributes: attrs)
+    }
+    
+    var emptyStateButtonSize: CGSize? {
+        return CGSize(width: 200, height: 20)
+    }
+    
+    var emptyStateButtonTitle: NSAttributedString? {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: view.tintColor,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)
+        ]
+        
+        return NSAttributedString(string: "New Idea", attributes: attrs)
+    }
+    
+    
+    func emptyStatebuttonWasTapped(button: UIButton) {
+        performSegue(withIdentifier: "GoNewPractice", sender: nil)
+    }
+    
+    var emptyStateImage: UIImage? {
+        return UIImage(named: "onboard1")
+    }
+    
+    var emptyStateImageSize: CGSize? {
+        return CGSize(width: 256, height: 256)
+    }
 }

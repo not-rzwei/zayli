@@ -8,6 +8,7 @@ PODS:
   - RxSwift (5.0.0)
   - SwiftDate (5.1.0)
   - SwiftySound (1.1.0)
+  - UIEmptyState (4.0.1)
 
 DEPENDENCIES:
   - Eureka (~> 5.0)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - RxSwift (~> 5.0)
   - SwiftDate (~> 5.0)
   - SwiftySound (~> 1.1)
+  - UIEmptyState
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - RxSwift
     - SwiftDate
     - SwiftySound
+    - UIEmptyState
 
 SPEC CHECKSUMS:
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
   SwiftySound: eb46cc2399cf7d94f58c372f38216e15e0a6de3e
+  UIEmptyState: 767376694d9402452fb3c0a5a5283176c6a53c92
 
-PODFILE CHECKSUM: b4eaa2f0ea543829dfb4a1ed3176daec955bd5eb
+PODFILE CHECKSUM: 45c0c904a0da14854ac5b47558ee09fa938d4d66
 
 COCOAPODS: 1.7.4

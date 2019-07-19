@@ -11,4 +11,5 @@ target 'zayli' do
   pod 'RxSwift', '~> 5.0'
   pod 'SwiftDate', '~> 5.0'
   pod 'SwiftySound', '~> 1.1'
+  pod 'UIEmptyState'
 end
