@@ -38,7 +38,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-iD-aiR">
-                                                    <rect key="frame" x="25" y="77" width="218" height="15"/>
+                                                    <rect key="frame" x="25" y="79" width="218" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,29 +52,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq9-1P-mOc" userLabel="Record Label">
-                                                    <rect key="frame" x="25" y="58" width="210" height="15"/>
+                                                    <rect key="frame" x="25" y="63" width="210" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twf-8S-P4z" customClass="MyPrettyDesignableButton" customModule="zayli" customModuleProvider="target">
-                                                    <rect key="frame" x="287" y="79" width="68" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="Detail">
-                                                        <color key="titleColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="6"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="detailAction:" destination="X1B-S8-QB3" eventType="touchUpInside" id="nbX-Z4-Mm1"/>
-                                                        <segue destination="HLJ-40-Rk1" kind="show" id="0f7-C0-5VV"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.41176470588235292" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <userDefinedRuntimeAttributes>
@@ -377,7 +360,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Recording" largeTitleDisplayMode="never" id="Zw5-fy-av1">
+                    <navigationItem key="navigationItem" title="Practice" id="Zw5-fy-av1">
                         <barButtonItem key="rightBarButtonItem" title="Add Recording" id="xSH-jn-rkZ">
                             <connections>
                                 <segue destination="uKp-ex-xK3" kind="presentation" id="LwO-TM-Oje"/>
@@ -506,7 +489,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JrT-Gp-l0r"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Practice" largeTitleDisplayMode="never" id="BIY-42-XnY">
+                    <navigationItem key="navigationItem" title="Story Guideline" prompt="Fill the form before practice" largeTitleDisplayMode="never" id="BIY-42-XnY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zLA-AB-0tO">
                             <connections>
                                 <action selector="cancelAction:" destination="iDe-OQ-sps" id="du5-jG-EzN"/>

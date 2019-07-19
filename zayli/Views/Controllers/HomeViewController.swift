@@ -14,17 +14,10 @@ class HomeViewController: UITableViewController, UIEmptyStateDataSource, UIEmpty
 
     private var practices: Results<Practice>?
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-        self.reloadEmptyState()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emptyStateDataSource = self
-        self.emptyStateDelegate = self
-        
+        setupEmptyState()
         setupData()
         print(Realm.Configuration.defaultConfiguration.fileURL)
     }
@@ -33,6 +26,17 @@ class HomeViewController: UITableViewController, UIEmptyStateDataSource, UIEmpty
         practices = Realm.shared.objects(Practice.self).sorted(
             byKeyPath: "timestamp", ascending: false
         )
+    }
+    
+    func setupEmptyState(){
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        self.reloadEmptyState()
     }
     
 }
