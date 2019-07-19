@@ -476,13 +476,14 @@
                                 <segue destination="3i4-Kk-QTv" kind="unwind" identifier="BackToFeedback" unwindAction="unwindToFeedback:" id="jHq-oW-rBs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="FjJ-JS-BQ3">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="FjJ-JS-BQ3">
                             <connections>
                                 <action selector="doneAction:" destination="ugc-g8-S5q" id="bqT-9l-EYy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="FjJ-JS-BQ3" id="DK4-qd-DWh"/>
                         <segue destination="qBv-LJ-w5l" kind="presentation" identifier="GoFeedbackThanks" id="hnL-Zk-5Qb"/>
                     </connections>
                 </viewController>
@@ -507,6 +508,7 @@
                                 <rect key="frame" x="20" y="785" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.41176470588235292" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -647,6 +649,7 @@
                                 <rect key="frame" x="20" y="785" width="374" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92482680082321167" green="0.40056061744689941" blue="0.37643003463745117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Let's Start"/>
                                 <connections>
