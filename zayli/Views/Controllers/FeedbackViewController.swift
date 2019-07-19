@@ -14,6 +14,11 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
 
     private var feedbacks: Results<Feedback>?
     
+    @IBAction func unwindToFeedback(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

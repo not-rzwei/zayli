@@ -13,7 +13,7 @@ import RealmSwift
 class NewFeedbackViewController: FormViewController {
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
