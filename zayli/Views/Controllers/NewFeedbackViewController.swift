@@ -31,7 +31,7 @@ class NewFeedbackViewController: FormViewController {
             record?.feedbacks.append(feedback)
         }
         
-        performSegue(withIdentifier: "BackToFeedback", sender: nil)
+        performSegue(withIdentifier: "GoFeedbackThanks", sender: nil)
     }
     
     override func viewDidLoad() {
