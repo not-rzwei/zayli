@@ -8,16 +8,23 @@
 
 import UIKit
 import RealmSwift
+import UIEmptyState
 
-
-class FeedbackViewController: UITableViewController {
+class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
     private var feedbacks: Results<Feedback>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupEmptyState()
         setupData()
+        setupUI()
+    }
+    
+    func setupUI(){
+        let number = getTempId("recordNumber")
+        title = "Record \(number) Feedback"
     }
     
     func setupData() {
@@ -27,10 +34,15 @@ class FeedbackViewController: UITableViewController {
         feedbacks = record?.feedbacks.sorted(byKeyPath: "timestamp", ascending: false)
     }
     
+    func setupEmptyState(){
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tableView.reloadData()
+        self.reloadEmptyState()
     }
 
     // MARK: - Table view data source
@@ -48,4 +60,33 @@ class FeedbackViewController: UITableViewController {
         return cell
     }
 
+}
+
+extension FeedbackViewController {
+    var emptyStateTitle: NSAttributedString {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title2)
+        ]
+        
+        return NSAttributedString(string: "There is no Feedback yet!", attributes: attrs)
+    }
+    
+    var emptyStateDetailMessage: NSAttributedString? {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)
+        ]
+        
+        return NSAttributedString(string: "You can add feedback now", attributes: attrs)
+    }
+    
+    var emptyStateImage: UIImage? {
+        return UIImage(named: "onboard3")
+    }
+    
+    var emptyStateImageSize: CGSize? {
+        return CGSize(width: 256, height: 256)
+    }
+    
 }

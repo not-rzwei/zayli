@@ -65,8 +65,11 @@ extension RecordingViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let record = records?[indexPath.row]
+        let number = records!.count - indexPath.row
         
         setTempId(record!.id, key: "recordId")
+        setTempId(String(describing: number), key: "recordNumber")
+        
         performSegue(withIdentifier: "GoFeedbackList", sender: nil)
         
     }
@@ -90,10 +93,6 @@ extension RecordingViewController {
         ]
         
         return NSAttributedString(string: "You can add recording now", attributes: attrs)
-    }
-    
-    func emptyStatebuttonWasTapped(button: UIButton) {
-        performSegue(withIdentifier: "GoNewPractice", sender: nil)
     }
     
 }
