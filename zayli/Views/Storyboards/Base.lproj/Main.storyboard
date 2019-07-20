@@ -649,8 +649,11 @@ Prepare your best!</string>
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ekx-tB-Us5"/>
-                        <barButtonItem systemItem="play" id="dwW-yu-Gr6">
+                        <barButtonItem image="play button" id="dwW-yu-Gr6">
                             <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="playbackAction:" destination="mag-XU-taU" id="Bvf-rk-iZL"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Opf-hb-aqh"/>
                     </toolbarItems>
@@ -663,6 +666,7 @@ Prepare your best!</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="playabackButton" destination="dwW-yu-Gr6" id="EuV-kv-uJT"/>
                         <segue destination="n2e-px-aJK" kind="show" identifier="GoFeedbackDetail" id="Lji-c4-PtE"/>
                     </connections>
                 </tableViewController>
@@ -989,6 +993,7 @@ Your Recording has been saved!</string>
         <image name="onboard2" width="343" height="394"/>
         <image name="onboard3" width="192" height="192"/>
         <image name="onboard4" width="325" height="325"/>
+        <image name="play button" width="23" height="28"/>
         <image name="right_chevron" width="12" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>

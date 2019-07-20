@@ -12,11 +12,22 @@ import UIEmptyState
 
 class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
-    private var feedbacks: Results<Feedback>?
-    
+    @IBOutlet weak var playabackButton: UIBarButtonItem!
     @IBAction func unwindToFeedback(_ unwindSegue: UIStoryboardSegue) {
         let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
+    }
+    
+    private var feedbacks: Results<Feedback>?
+    private var playbackState: audioState = .stopped {
+        didSet {
+            updatePlaybackState()
+        }
+    }
+    
+    enum audioState {
+        case playing
+        case stopped
     }
     
     override func viewDidLoad() {
@@ -79,6 +90,22 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         return cell
     }
 
+    @IBAction func playbackAction(_ sender: UIBarButtonItem) {
+        playbackState = .playing
+    }
+    
+    func updatePlaybackState() {
+        switch playbackState {
+        case .playing:
+            playabackButton.image = UIImage(named: "pausebutton")
+        case .stopped:
+            playabackButton.image = UIImage(named: "playbutton")
+        default:
+            return
+        }
+        
+        print(playbackState)
+    }
 }
 
 extension FeedbackViewController {
