@@ -449,6 +449,9 @@ Prepare your best!</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PSh-O4-pu2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="fsQ-Tz-iNn" kind="relationship" relationship="rootViewController" id="Mic-7R-6Gf"/>
                     </connections>
@@ -493,10 +496,10 @@ Prepare your best!</string>
             </objects>
             <point key="canvasLocation" x="2214" y="-569"/>
         </scene>
-        <!--View Controller-->
+        <!--Feedback Hint-->
         <scene sceneID="JAT-zd-TNq">
             <objects>
-                <viewController id="SmZ-AS-TPg" sceneMemberID="viewController">
+                <viewController title="Feedback Hint" id="SmZ-AS-TPg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pz6-OZ-pGY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -644,6 +647,13 @@ Prepare your best!</string>
                             <outlet property="delegate" destination="mag-XU-taU" id="NBq-XK-nrR"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ekx-tB-Us5"/>
+                        <barButtonItem systemItem="play" id="dwW-yu-Gr6">
+                            <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Opf-hb-aqh"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Feedback List" id="ybh-sE-uk9">
                         <barButtonItem key="rightBarButtonItem" title="Add Feedback" id="lvD-q4-EK9">
                             <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -27,9 +27,16 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         setupUI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isToolbarHidden = true
+    }
+    
     func setupUI(){
         let number = getTempId("recordNumber")
         title = "Record \(number) Feedback"
+        
+        navigationController?.isToolbarHidden = false
     }
     
     func setupData() {
