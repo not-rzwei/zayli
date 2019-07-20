@@ -714,34 +714,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Practice to Convey Idea with Storytelling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-NS-tlE">
-                                <rect key="frame" x="92" y="695" width="231" height="41"/>
+                                <rect key="frame" x="92" y="715" width="230" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0c3-YZ-bh0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.92685377599999996" green="0.404874444" blue="0.38036936519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-lR-jKK">
-                                <rect key="frame" x="47" y="80" width="320" height="332"/>
+                                <rect key="frame" x="47" y="80" width="304" height="495.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="332" id="MOs-qX-MMH"/>
-                                    <constraint firstAttribute="width" constant="320" id="yC5-EC-gjQ"/>
+                                    <constraint firstAttribute="height" constant="494.99999999999989" id="xQ4-uV-21x"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="18a-Zo-lbX" firstAttribute="trailing" secondItem="R0u-lR-jKK" secondAttribute="trailing" constant="47" id="1ax-qW-1ox"/>
-                            <constraint firstItem="R0u-lR-jKK" firstAttribute="top" secondItem="Wzg-Ie-luv" secondAttribute="top" constant="80" id="3Ou-QU-TDW"/>
+                            <constraint firstItem="qhr-NS-tlE" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="92" id="CiR-kw-XBF"/>
+                            <constraint firstItem="qhr-NS-tlE" firstAttribute="centerX" secondItem="Wzg-Ie-luv" secondAttribute="centerX" id="EBD-EA-PFd"/>
+                            <constraint firstItem="R0u-lR-jKK" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="47" id="EVV-hs-81h"/>
                             <constraint firstItem="18a-Zo-lbX" firstAttribute="bottom" secondItem="qhr-NS-tlE" secondAttribute="bottom" constant="126" id="Mqv-nS-Rit"/>
-                            <constraint firstItem="18a-Zo-lbX" firstAttribute="trailing" secondItem="qhr-NS-tlE" secondAttribute="trailing" constant="91" id="NP5-mq-n3S"/>
-                            <constraint firstItem="qhr-NS-tlE" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="92" id="cL2-li-HJY"/>
-                            <constraint firstItem="R0u-lR-jKK" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="47" id="ea3-hz-Dae"/>
+                            <constraint firstItem="R0u-lR-jKK" firstAttribute="top" secondItem="18a-Zo-lbX" secondAttribute="top" constant="36" id="WO9-uv-z1D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="18a-Zo-lbX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fd-vJ-Xqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-1473"/>
+            <point key="canvasLocation" x="92.753623188405811" y="-1473.2142857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mWI-VW-h45">
@@ -828,7 +829,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard4" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-IP-l1X">
-                                <rect key="frame" x="47" y="80" width="321" height="334.00000000000006"/>
+                                <rect key="frame" x="47" y="80" width="321" height="334"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="334" id="Gdc-WR-LWB"/>
                                     <constraint firstAttribute="width" constant="321" id="YJG-f1-tnT"/>
@@ -902,10 +903,10 @@
         <image name="FeedbackGuide1" width="96" height="96"/>
         <image name="FeedbackGuide2" width="96" height="96"/>
         <image name="FeedbackGuide3" width="96" height="96"/>
-        <image name="onboard1" width="304" height="332"/>
+        <image name="onboard1" width="304" height="392"/>
         <image name="onboard2" width="343" height="394"/>
-        <image name="onboard3" width="329" height="329"/>
-        <image name="onboard4" width="295" height="322"/>
+        <image name="onboard3" width="192" height="192"/>
+        <image name="onboard4" width="325" height="325"/>
         <image name="right_chevron" width="12" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
