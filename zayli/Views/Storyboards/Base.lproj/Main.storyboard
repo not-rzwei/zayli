@@ -706,45 +706,6 @@
             <point key="canvasLocation" x="-780" y="-1473"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="K0Z-uf-GP9">
-            <objects>
-                <viewController storyboardIdentifier="firstCard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8fl-0B-PzB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wzg-Ie-luv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Practice to Convey Idea with Storytelling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-NS-tlE">
-                                <rect key="frame" x="92" y="715" width="230" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="0c3-YZ-bh0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.92685377599999996" green="0.404874444" blue="0.38036936519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-lR-jKK">
-                                <rect key="frame" x="47" y="80" width="304" height="495.00000000000011"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="494.99999999999989" id="xQ4-uV-21x"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qhr-NS-tlE" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="92" id="CiR-kw-XBF"/>
-                            <constraint firstItem="qhr-NS-tlE" firstAttribute="centerX" secondItem="Wzg-Ie-luv" secondAttribute="centerX" id="EBD-EA-PFd"/>
-                            <constraint firstItem="R0u-lR-jKK" firstAttribute="leading" secondItem="18a-Zo-lbX" secondAttribute="leading" constant="47" id="EVV-hs-81h"/>
-                            <constraint firstItem="18a-Zo-lbX" firstAttribute="bottom" secondItem="qhr-NS-tlE" secondAttribute="bottom" constant="126" id="Mqv-nS-Rit"/>
-                            <constraint firstItem="R0u-lR-jKK" firstAttribute="top" secondItem="18a-Zo-lbX" secondAttribute="top" constant="36" id="WO9-uv-z1D"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="18a-Zo-lbX"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2fd-vJ-Xqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="-1473.2142857142856"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="mWI-VW-h45">
             <objects>
                 <viewController storyboardIdentifier="secondCard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6zL-fi-CxQ" sceneMemberID="viewController">
@@ -780,7 +741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qc-gx-yct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="-1473"/>
+            <point key="canvasLocation" x="814" y="-1475"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nml-9r-tuQ">
@@ -896,6 +857,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgW-gP-7aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ujC-ZD-5i7">
+            <objects>
+                <viewController storyboardIdentifier="firstCard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YHe-ax-xt9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gSp-FT-rVS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Conveying Idea Practice with Storytelling!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-6d-xhn">
+                                <rect key="frame" x="92" y="695" width="231" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92685377599999996" green="0.404874444" blue="0.38036936519999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-eH-3Ox">
+                                <rect key="frame" x="0.0" y="80" width="414" height="394.00000000000011"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="0WU-5x-mTl"/>
+                                    <constraint firstAttribute="height" constant="394" id="OW9-DE-Yeh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZNb-eK-xqO" firstAttribute="bottom" secondItem="nbF-6d-xhn" secondAttribute="bottom" constant="126" id="DvL-3M-1te"/>
+                            <constraint firstItem="nbF-6d-xhn" firstAttribute="leading" secondItem="ZNb-eK-xqO" secondAttribute="leading" constant="92" id="MN8-a1-blB"/>
+                            <constraint firstItem="MqY-eH-3Ox" firstAttribute="leading" secondItem="gSp-FT-rVS" secondAttribute="leading" id="VSI-EW-GLO"/>
+                            <constraint firstItem="ZNb-eK-xqO" firstAttribute="trailing" secondItem="nbF-6d-xhn" secondAttribute="trailing" constant="91" id="aKV-47-K1m"/>
+                            <constraint firstItem="MqY-eH-3Ox" firstAttribute="top" secondItem="gSp-FT-rVS" secondAttribute="top" constant="80" id="mte-WL-mzd"/>
+                            <constraint firstAttribute="trailing" secondItem="MqY-eH-3Ox" secondAttribute="trailing" id="tQ7-9s-LoQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZNb-eK-xqO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yje-uc-7KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-1475"/>
         </scene>
     </scenes>
     <resources>
