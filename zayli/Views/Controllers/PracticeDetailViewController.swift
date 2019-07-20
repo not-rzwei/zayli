@@ -2,45 +2,69 @@
 //  PracticeDetailViewController.swift
 //  zayli
 //
-//  Created by rshier on 16/07/19.
+//  Created by rshier on 20/07/19.
 //  Copyright © 2019 rshier. All rights reserved.
 //
 
 import UIKit
+import Eureka
 import RealmSwift
 
-class PracticeDetailViewController: UITableViewController {
-    // MARK: - Detail Outlets
-    @IBOutlet weak var ideaLabel: UILabel!
-    @IBOutlet weak var backgroundLabel: UILabel!
-    @IBOutlet weak var problemLabel: UILabel!
-    @IBOutlet weak var solutionLabel: UILabel!
-    @IBOutlet weak var targetLabel: UILabel!
-    @IBOutlet weak var summaryLabel: UILabel!
-    
-    private var practice: Practice?
+class PracticeDetailViewController: FormViewController {
+
+    private var practice: Practice!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupData()
-        setupUI()
+        setupTable()
     }
     
     func setupData(){
         let id = getTempId()
-        
         practice = Realm.shared.object(ofType: Practice.self, forPrimaryKey: id)
-        print(practice)
     }
     
-    func setupUI(){
-        ideaLabel.text = practice?.idea
-        backgroundLabel.text = practice?.background
-        problemLabel.text = "Problem"
-        solutionLabel.text = "Solution"
-        targetLabel.text = practice?.target
-        summaryLabel.text = practice?.summary
+    func setupTable(){
+        form
+        
+        +++ Section("idea")
+        <<< LabelRow(){ row in
+            row.title = practice.idea
+        }
+            
+        +++ Section("background problem")
+        <<< LabelRow(){ row in
+            row.title = practice.background
+        }
+        
+        +++ Section("specific problems"){ section in
+            self.practice.problems.forEach { problem in
+                section <<< LabelRow(){ row in
+                    row.title = problem.name
+                }
+            }
+        }
+        
+        +++ Section("solutions"){ section in
+            self.practice.solutions.forEach { solution in
+                section <<< LabelRow(){ row in
+                    row.title = solution.name
+                }
+            }
+        }
+        
+        +++ Section("target")
+            <<< LabelRow(){ row in
+                row.title = practice.target
+        }
+        
+        +++ Section("summary")
+            <<< TextAreaRow(){ row in
+                row.value = practice.summary
+        }
         
     }
+
 }

@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 import AVFoundation
 import RealmSwift
+import FloatingPanel
 
-class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
+class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, FloatingPanelControllerDelegate {
     private let recordId: String = UUID().uuidString
     private var audioPath: URL!
+    private var fpc: FloatingPanelController!
     
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -44,7 +46,7 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TODO: Make sure you must have added privacy permission in plist "Privacy - Microphone Usage Description"
+        setupFpc()
         requestRecordPermission()
     }
     
@@ -144,4 +146,78 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
+    func setupFpc() {
+        fpc = FloatingPanelController()
+        fpc.delegate = self
+        
+        let contentVC = PracticeDetailViewController()
+        fpc.set(contentViewController: contentVC)
+        fpc.track(scrollView: contentVC.tableView)
+        
+        fpc.surfaceView.cornerRadius = 16
+        fpc.surfaceView.shadowHidden = true
+        fpc.surfaceView.borderWidth = 1.0 / traitCollection.displayScale
+        fpc.surfaceView.borderColor = UIColor.black.withAlphaComponent(0.2)
+        
+        fpc.addPanel(toParent: self)
+    }
+    
+    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
+        return FloatingPanelDetailLayout()
+    }
+    
+    func floatingPanel(_ vc: FloatingPanelController, behaviorFor newCollection: UITraitCollection) -> FloatingPanelBehavior? {
+        return FloatingPanelDetailBehaviour()
+    }
+}
+
+class FloatingPanelDetailLayout: FloatingPanelLayout {
+    var initialPosition: FloatingPanelPosition {
+        return .tip
+    }
+    
+    var topInteractionBuffer: CGFloat { return 0.0 }
+    var bottomInteractionBuffer: CGFloat { return 0.0 }
+    
+    func insetFor(position: FloatingPanelPosition) -> CGFloat? {
+        switch position {
+        case .full: return 56.0
+        case .half: return 262.0
+        case .tip: return 85.0 + 44.0 // Visible + ToolView
+        default: return nil
+        }
+    }
+    
+    func backdropAlphaFor(position: FloatingPanelPosition) -> CGFloat {
+        return 0.0
+    }
+}
+
+class FloatingPanelDetailBehaviour: FloatingPanelBehavior {
+    var velocityThreshold: CGFloat {
+        return 15.0
+    }
+    
+    func interactionAnimator(_ fpc: FloatingPanelController, to targetPosition: FloatingPanelPosition, with velocity: CGVector) -> UIViewPropertyAnimator {
+        let timing = timeingCurve(to: targetPosition, with: velocity)
+        return UIViewPropertyAnimator(duration: 0, timingParameters: timing)
+    }
+    
+    private func timeingCurve(to: FloatingPanelPosition, with velocity: CGVector) -> UITimingCurveProvider {
+        let damping = self.damping(with: velocity)
+        return UISpringTimingParameters(dampingRatio: damping,
+                                        frequencyResponse: 0.4,
+                                        initialVelocity: velocity)
+    }
+    
+    private func damping(with velocity: CGVector) -> CGFloat {
+        switch velocity.dy {
+        case ...(-velocityThreshold):
+            return 0.7
+        case velocityThreshold...:
+            return 0.7
+        default:
+            return 1.0
+        }
+    }
 }

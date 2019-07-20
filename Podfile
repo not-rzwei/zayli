@@ -12,4 +12,5 @@ target 'zayli' do
   pod 'SwiftDate', '~> 5.0'
   pod 'SwiftySound', '~> 1.1'
   pod 'UIEmptyState'
+  pod 'FloatingPanel'
 end
