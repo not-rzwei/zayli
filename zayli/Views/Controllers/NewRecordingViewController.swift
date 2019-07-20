@@ -12,10 +12,23 @@ import AVFoundation
 import RealmSwift
 import FloatingPanel
 
-class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, FloatingPanelControllerDelegate {
+class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
     private let recordId: String = UUID().uuidString
     private var audioPath: URL!
     private var fpc: FloatingPanelController!
+    private var recordingState: audioState = .stopped {
+        didSet {
+            updateRecordingState()
+        }
+    }
+    
+    enum audioState {
+        case recording
+        case stopped
+    }
+    
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var recordingButton: MyPrettyDesignableButton!
     
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -47,7 +60,12 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, Flo
         super.viewDidLoad()
         
         setupFpc()
+        setupUI()
         requestRecordPermission()
+    }
+    
+    func setupUI(){
+        doneButton.isEnabled = false
     }
     
     //MARK: Inital Audio Recording setup methods
@@ -98,6 +116,9 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, Flo
                 audioRecorder.delegate = self
                 audioRecorder.isMeteringEnabled = true
                 audioRecorder.record()
+                
+                recordingState = .recording
+                
                 meterTimer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector:#selector(self.updateAudioMeter(timer:)), userInfo:nil, repeats:true)
                 
             } catch {
@@ -106,6 +127,7 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, Flo
         }
         else
         {
+            recordingState = .stopped
             finishRecording(success: true)
         }
     }
@@ -122,9 +144,24 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, Flo
             audioRecorder.updateMeters()
         }
     }
+ 
+    func updateRecordingState(){
+        switch recordingState {
+        case .recording:
+            animateRecordButton(radius: 12, scale: 0.6)
+        case .stopped:
+            animateRecordButton(radius: 36, scale: 1)
+            doneButton.isEnabled = true
+        default:
+            return
+        }
+    }
     
-    @IBAction func stopRecording(_ sender: Any) {
-        finishRecording(success: true)
+    func animateRecordButton(radius: CGFloat, scale: CGFloat){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.recordingButton.layer.cornerRadius = radius
+            self.recordingButton.transform = CGAffineTransform(scaleX: scale, y: scale)
+        })
     }
     
     //MARK: AVAudio Recorder Delegate method
@@ -145,7 +182,10 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate, Flo
             print("Recording failed")
         }
     }
-    
+
+}
+
+extension NewRecordingViewController: FloatingPanelControllerDelegate {
     func setupFpc() {
         fpc = FloatingPanelController()
         fpc.delegate = self

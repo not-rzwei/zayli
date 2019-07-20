@@ -270,6 +270,9 @@
                                                                 <real key="value" value="36"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="startRecording:" destination="TWM-Uq-g0w" eventType="touchUpInside" id="keW-kw-aVr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -316,6 +319,8 @@ Prepare your best!</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="d5f-rh-ARL" id="xWW-kL-foU"/>
+                        <outlet property="recordingButton" destination="Iej-Su-wqq" id="xfd-it-VS8"/>
                         <outlet property="recordingTimeLbl" destination="59a-la-Qre" id="ATP-nw-w12"/>
                     </connections>
                 </viewController>
