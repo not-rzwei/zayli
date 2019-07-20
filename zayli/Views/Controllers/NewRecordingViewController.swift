@@ -48,7 +48,7 @@ class NewRecordingViewController: UIViewController, AVAudioRecorderDelegate {
             practice?.records.append(record)
         }
 
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "GoRecordingThanks", sender: nil)
     }
     
     @IBOutlet var recordingTimeLbl: UILabel!

@@ -14,6 +14,11 @@ class RecordingViewController: UITableViewController, UIEmptyStateDataSource, UI
     
     private var practice: Practice?
     private var records: Results<Record>?
+    
+    @IBAction func unwindToRecordingList(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
