@@ -21,7 +21,6 @@
 		295C879B22DF08CE0048B8CF /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */; };
 		2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703C22DD6DB700DB83FC /* RecordModel.swift */; };
 		2967703F22DD6E4700DB83FC /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967703E22DD6E4700DB83FC /* FeedbackModel.swift */; };
-		2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */; };
 		2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704222DD889800DB83FC /* NewRecordingViewController.swift */; };
 		2967704622DD8CAF00DB83FC /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704522DD8CAF00DB83FC /* RecordingViewController.swift */; };
 		2967704922DDB13E00DB83FC /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967704822DDB13E00DB83FC /* UIKitExtension.swift */; };
@@ -29,6 +28,7 @@
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
 		29743EAE22D7E2F60013C9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */; };
+		298E7B2322E2E6A9009E6543 /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */; };
 		29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */; };
 		A8E834FD74A6F62BCA118FCB /* Pods_zayli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C817D8F8A38D328861EEA162 /* Pods_zayli.framework */; };
 		BD21A03D22E1C39F0097DE9E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */; };
@@ -49,7 +49,6 @@
 		295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		2967703C22DD6DB700DB83FC /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		2967703E22DD6E4700DB83FC /* FeedbackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
-		2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		2967704222DD889800DB83FC /* NewRecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordingViewController.swift; sourceTree = "<group>"; };
 		2967704522DD8CAF00DB83FC /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		2967704822DDB13E00DB83FC /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		29743EAA22D7E2F60013C9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29743EAD22D7E2F60013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29743EAF22D7E2F60013C9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeDetailViewController.swift; path = ../../../../../../../../../System/Volumes/Data/Users/rshier/Documents/Code/Swift/zayli/PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC1DA1135BCA1FD6036CB21A /* Pods-zayli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zayli.release.xcconfig"; path = "Target Support Files/Pods-zayli/Pods-zayli.release.xcconfig"; sourceTree = "<group>"; };
 		BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		2967704E22DDB4A900DB83FC /* Practice */ = {
 			isa = PBXGroup;
 			children = (
-				2967704022DD777F00DB83FC /* PracticeDetailViewController.swift */,
+				298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */,
 				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
 			);
 			name = Practice;
@@ -348,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				298E7B2322E2E6A9009E6543 /* PracticeDetailViewController.swift in Sources */,
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,
@@ -361,7 +362,6 @@
 				2967704322DD889800DB83FC /* NewRecordingViewController.swift in Sources */,
 				29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */,
 				295C879322DECACB0048B8CF /* NewFeedbackViewController.swift in Sources */,
-				2967704122DD777F00DB83FC /* PracticeDetailViewController.swift in Sources */,
 				2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */,
 				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,
 				2967704622DD8CAF00DB83FC /* RecordingViewController.swift in Sources */,
