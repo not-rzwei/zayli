@@ -95,4 +95,12 @@ extension RecordingViewController {
         return NSAttributedString(string: "You can add recording now", attributes: attrs)
     }
     
+    
+    var emptyStateImage: UIImage? {
+        return UIImage(named: "recordinglistempty")
+    }
+    
+    var emptyStateImageSize: CGSize? {
+        return CGSize(width: 256, height: 256)
+    }
 }
