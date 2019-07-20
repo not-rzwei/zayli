@@ -339,6 +339,16 @@ Prepare your best!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pHL-1B-S4h"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jA7-5o-kE2"/>
+                        <barButtonItem image="playbutton" id="Gu7-ZQ-q5n">
+                            <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="playbackAction:" destination="ugc-g8-S5q" id="r4e-0f-zqS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="msf-aM-A6f"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="New Feedback" id="qCS-Mx-D2Z">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="irc-3x-D0p">
                             <connections>
@@ -352,8 +362,10 @@ Prepare your best!</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="doneButton" destination="FjJ-JS-BQ3" id="DK4-qd-DWh"/>
+                        <outlet property="playbackButton" destination="Gu7-ZQ-q5n" id="Pid-ES-OWU"/>
                         <segue destination="qBv-LJ-w5l" kind="presentation" identifier="GoFeedbackThanks" id="hnL-Zk-5Qb"/>
                     </connections>
                 </viewController>
@@ -573,13 +585,17 @@ Prepare your best!</string>
         <!--Navigation Controller-->
         <scene sceneID="iKd-3u-LRi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooG-hQ-s9G" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="ooG-hQ-s9G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hTe-yG-Ezc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aqC-pn-afX">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ugc-g8-S5q" kind="relationship" relationship="rootViewController" id="OSZ-HV-ydh"/>
                     </connections>

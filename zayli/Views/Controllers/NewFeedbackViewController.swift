@@ -9,20 +9,33 @@
 import UIKit
 import Eureka
 import RealmSwift
+import SwiftySound
 
 class NewFeedbackViewController: FormViewController {
     
+    @IBOutlet weak var playbackButton: UIBarButtonItem!
     @IBOutlet weak var doneButton: UIBarButtonItem!
+    
+    private var record: Record!
+    private var playback: Sound!
+    private var playbackState: audioState = .stopped {
+        didSet {
+            updatePlaybackState()
+        }
+    }
+    
+    enum audioState {
+        case playing
+        case stopped
+    }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
-        let recordId = getTempId("recordId")
-        let record = Realm.shared.object(ofType: Record.self, forPrimaryKey: recordId)
-        
         let feedback = Feedback()
+        
         feedback.name = form.valueByTag("name")
         feedback.idea = form.valueByTag("idea")
         feedback.understanding = form.valueByTag("understanding")
@@ -40,6 +53,15 @@ class NewFeedbackViewController: FormViewController {
         super.viewDidLoad()
 
         setupForm()
+        setupData()
+    }
+    
+    func setupData(){
+        let recordId = getTempId("recordId")
+        record = Realm.shared.object(ofType: Record.self, forPrimaryKey: recordId)
+        
+        let playbackUrl = URL(string: record!.resource)!
+        playback = Sound(url: playbackUrl)
     }
     
     func formValidate(){
@@ -129,4 +151,35 @@ class NewFeedbackViewController: FormViewController {
         
         }
     
+    
+    @IBAction func playbackAction(_ sender: UIBarButtonItem) {
+        toggleState()
+    }
+    
+    func updatePlaybackState() {
+        switch playbackState {
+        case .playing:
+            playbackButton.image = UIImage(named: "pausebutton")
+            
+            playback.play { completed in
+                if completed {
+                    self.toggleState()
+                }
+            }
+        case .stopped:
+            playbackButton.image = UIImage(named: "playbutton")
+            
+            playback.stop()
+        default:
+            return
+        }
+    }
+    
+    func toggleState() {
+        if playbackState == .playing {
+            playbackState = .stopped
+        } else  {
+            playbackState = .playing
+        }
+    }
 }
