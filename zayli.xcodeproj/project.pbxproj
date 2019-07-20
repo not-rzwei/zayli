@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29057F9422E1CDED00D44B40 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */; };
 		2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */; };
+		292D357922E32A7500287CC0 /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292D357822E32A7500287CC0 /* FeedbackDetailViewController.swift */; };
+		292D357B22E32A8D00287CC0 /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292D357A22E32A8D00287CC0 /* PracticeDetailViewController.swift */; };
 		293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293376A422D801F300F7A546 /* NewPracticeViewController.swift */; };
 		2942451322D8693E0096BE6A /* PracticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451222D8693E0096BE6A /* PracticeModel.swift */; };
 		2942451522D870190096BE6A /* ProblemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942451422D870190096BE6A /* ProblemModel.swift */; };
@@ -28,15 +29,15 @@
 		29743EA922D7E2F50013C9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EA722D7E2F50013C9B4 /* Main.storyboard */; };
 		29743EAB22D7E2F60013C9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAA22D7E2F60013C9B4 /* Assets.xcassets */; };
 		29743EAE22D7E2F60013C9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29743EAC22D7E2F60013C9B4 /* LaunchScreen.storyboard */; };
-		298E7B2322E2E6A9009E6543 /* PracticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */; };
 		29AF9A4622D7EE3700A35F6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */; };
 		A8E834FD74A6F62BCA118FCB /* Pods_zayli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C817D8F8A38D328861EEA162 /* Pods_zayli.framework */; };
 		BD21A03D22E1C39F0097DE9E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedbackDetailViewController.swift; path = ../../../../../../../../../System/Volumes/Data/Users/rshier/Documents/Code/Swift/zayli/zayli/Views/Controllers/FeedbackDetailViewController.swift; sourceTree = "<group>"; };
 		2905F3E622DC2783006E4FA3 /* HomeViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTableCell.swift; sourceTree = "<group>"; };
+		292D357822E32A7500287CC0 /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
+		292D357A22E32A8D00287CC0 /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		293376A422D801F300F7A546 /* NewPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPracticeViewController.swift; sourceTree = "<group>"; };
 		2942451222D8693E0096BE6A /* PracticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeModel.swift; path = zayli/Models/PracticeModel.swift; sourceTree = SOURCE_ROOT; };
 		2942451422D870190096BE6A /* ProblemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProblemModel.swift; path = zayli/Models/ProblemModel.swift; sourceTree = SOURCE_ROOT; };
@@ -58,7 +59,6 @@
 		29743EAA22D7E2F60013C9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29743EAD22D7E2F60013C9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29743EAF22D7E2F60013C9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeDetailViewController.swift; path = ../../../../../../../../../System/Volumes/Data/Users/rshier/Documents/Code/Swift/zayli/zayli/Views/Controllers/PracticeDetailViewController.swift; sourceTree = "<group>"; };
 		29AF9A4522D7EE3700A35F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC1DA1135BCA1FD6036CB21A /* Pods-zayli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zayli.release.xcconfig"; path = "Target Support Files/Pods-zayli/Pods-zayli.release.xcconfig"; sourceTree = "<group>"; };
 		BD21A03C22E1C39F0097DE9E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -101,9 +101,9 @@
 		295C879122DECA9C0048B8CF /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				292D357822E32A7500287CC0 /* FeedbackDetailViewController.swift */,
 				295C879222DECACB0048B8CF /* NewFeedbackViewController.swift */,
 				295C879A22DF08CE0048B8CF /* FeedbackViewController.swift */,
-				29057F9322E1CDED00D44B40 /* FeedbackDetailViewController.swift */,
 			);
 			name = Feedback;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 		2967704E22DDB4A900DB83FC /* Practice */ = {
 			isa = PBXGroup;
 			children = (
-				298E7B2222E2E6A9009E6543 /* PracticeDetailViewController.swift */,
+				292D357A22E32A8D00287CC0 /* PracticeDetailViewController.swift */,
 				293376A422D801F300F7A546 /* NewPracticeViewController.swift */,
 			);
 			name = Practice;
@@ -348,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298E7B2322E2E6A9009E6543 /* PracticeDetailViewController.swift in Sources */,
+				292D357B22E32A8D00287CC0 /* PracticeDetailViewController.swift in Sources */,
 				2942451A22D879570096BE6A /* EurekaExtension.swift in Sources */,
 				2942451C22D87CF00096BE6A /* SolutionModel.swift in Sources */,
 				2905F3E722DC2783006E4FA3 /* HomeViewTableCell.swift in Sources */,
@@ -366,7 +366,7 @@
 				2942451E22D884570096BE6A /* RealmExtension.swift in Sources */,
 				2967704622DD8CAF00DB83FC /* RecordingViewController.swift in Sources */,
 				2942451522D870190096BE6A /* ProblemModel.swift in Sources */,
-				29057F9422E1CDED00D44B40 /* FeedbackDetailViewController.swift in Sources */,
+				292D357922E32A7500287CC0 /* FeedbackDetailViewController.swift in Sources */,
 				2967703D22DD6DB700DB83FC /* RecordModel.swift in Sources */,
 				293376A522D801F300F7A546 /* NewPracticeViewController.swift in Sources */,
 			);
