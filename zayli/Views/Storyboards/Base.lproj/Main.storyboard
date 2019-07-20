@@ -963,8 +963,8 @@ Prepare your best!</string>
                                     <segue destination="sYL-k2-OcG" kind="unwind" unwindAction="unwindToRecordingList:" id="man-3a-EWv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-g8-aft">
-                                <rect key="frame" x="50" y="212" width="315" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-g8-aft">
+                                <rect key="frame" x="29" y="157" width="356" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Congratulations
 Your Recording has been saved!</string>
@@ -980,7 +980,7 @@ Your Recording has been saved!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bB4-NF-afT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sYL-k2-OcG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4088" y="-569"/>
+            <point key="canvasLocation" x="4086.9565217391309" y="-569.19642857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -997,7 +997,7 @@ Your Recording has been saved!</string>
         <image name="right_chevron" width="12" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qdf-qO-ibb"/>
+        <segue reference="IkE-aa-8NS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.41176470590000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

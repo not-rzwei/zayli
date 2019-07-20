@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import UIEmptyState
+import SwiftySound
 
 class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
@@ -19,6 +20,7 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
     }
     
     private var feedbacks: Results<Feedback>?
+    private var playback: Sound!
     private var playbackState: audioState = .stopped {
         didSet {
             updatePlaybackState()
@@ -55,6 +57,9 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         let record = Realm.shared.object(ofType: Record.self, forPrimaryKey: id)
         
         feedbacks = record?.feedbacks.sorted(byKeyPath: "timestamp", ascending: false)
+        
+        let playbackUrl = URL(string: record!.resource)!
+        playback = Sound(url: playbackUrl)
     }
     
     func setupEmptyState(){
@@ -98,8 +103,16 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         switch playbackState {
         case .playing:
             playabackButton.image = UIImage(named: "pausebutton")
+            
+            playback.play { completed in
+                if completed {
+                    self.toggleState()
+                }
+            }
         case .stopped:
             playabackButton.image = UIImage(named: "playbutton")
+            
+            playback.stop()
         default:
             return
         }
