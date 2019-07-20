@@ -91,7 +91,7 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
     }
 
     @IBAction func playbackAction(_ sender: UIBarButtonItem) {
-        playbackState = .playing
+        toggleState()
     }
     
     func updatePlaybackState() {
@@ -103,8 +103,14 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
         default:
             return
         }
-        
-        print(playbackState)
+    }
+    
+    func toggleState() {
+        if playbackState == .playing {
+            playbackState = .stopped
+        } else  {
+            playbackState = .playing
+        }
     }
 }
 
