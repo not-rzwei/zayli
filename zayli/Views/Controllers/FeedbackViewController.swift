@@ -43,6 +43,8 @@ class FeedbackViewController: UITableViewController, UIEmptyStateDataSource, UIE
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isToolbarHidden = true
+        
+        Sound.stopAll()
     }
     
     func setupUI(){

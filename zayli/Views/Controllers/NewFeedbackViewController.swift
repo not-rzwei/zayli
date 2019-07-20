@@ -56,6 +56,12 @@ class NewFeedbackViewController: FormViewController {
         setupData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        Sound.stopAll()
+    }
+    
     func setupData(){
         let recordId = getTempId("recordId")
         record = Realm.shared.object(ofType: Record.self, forPrimaryKey: recordId)
